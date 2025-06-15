@@ -1,0 +1,33 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: >
+  Internet Gateway template: creates an Internet Gateway and attaches it to the specified VPC.
+
+Parameters:
+  ProjectName:
+    Type: String
+    Description: Project name prefix for resource naming
+
+  VpcId:
+    Type: AWS::EC2::VPC::Id
+    Description: The ID of the VPC to attach the Internet Gateway
+
+Resources:
+  InternetGateway:
+    Type: AWS::EC2::InternetGateway
+    Properties:
+      Tags:
+        - Key: Name
+          Value: !Sub "${ProjectName}-igw"
+
+  AttachInternetGateway:
+    Type: AWS::EC2::VPCGatewayAttachment
+    Properties:
+      InternetGatewayId: !Ref InternetGateway
+      VpcId: !Ref VpcId
+
+Outputs:
+  InternetGatewayId:
+    Description: The ID of the created Internet Gateway
+    Value: !Ref InternetGateway
+    Export:
+      Name: !Sub "${ProjectName}-InternetGatewayId-${AWS::StackName}"

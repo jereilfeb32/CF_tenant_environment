@@ -1,0 +1,17 @@
+[
+  { "ParameterKey": "ProjectName", "ParameterValue": "SaaS" },
+  { "ParameterKey": "Owner", "ParameterValue": "YourName" },
+  { "ParameterKey": "BusinessUnit", "ParameterValue": "Cloud" },
+  { "ParameterKey": "VpcCidr", "ParameterValue": "10.10.0.0/16" },
+  { "ParameterKey": "Region", "ParameterValue": "ap-southeast-1" },
+  { "ParameterKey": "AvailabilityZones", "ParameterValue": "ap-southeast-1a,ap-southeast-1b,ap-southeast-1c" },
+  { "ParameterKey": "PublicSubnetCidrs", "ParameterValue": "10.10.1.0/24,10.10.2.0/24,10.10.3.0/24" },
+  { "ParameterKey": "PrivateSubnetCidrs", "ParameterValue": "10.10.4.0/24,10.10.5.0/24,10.10.6.0/24" },
+  { "ParameterKey": "ALBSubnetCidrs", "ParameterValue": "10.10.7.0/24,10.10.8.0/24,10.10.9.0/24" },  
+  { "ParameterKey": "GWLBSubnetCidrs", "ParameterValue": "10.10.10.0/24,10.10.11.0/24,10.10.12.0/24" },
+  { "ParameterKey": "SFTPSubnetCidrs", "ParameterValue": "10.10.13.0/24,10.10.14.0/24,10.10.15.0/24" },
+  { "ParameterKey": "DomainName", "ParameterValue": "yourdomain.com" },
+  { "ParameterKey": "SubjectAlternativeNames", "ParameterValue": "www.SaaS.com" },
+  { "ParameterKey": "ACMCertificateArn", "ParameterValue": "arn:aws:acm:ap-southeast-1:975050199901:certificate/cda9a796-af6a-43f6-9362-f5c66bbf3a16" },
+  { "ParameterKey": "WAFWebACLArn", "ParameterValue": "arn:aws:wafv2:ap-southeast-1:975050199901:regional/webacl/SaaS-web-acl/a3412bcf-9959-4e78-b721-4c68f899b623" }
+]

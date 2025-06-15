@@ -1,0 +1,2355 @@
+[2025-06-15 13:14:17,146] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 13:14:17,338] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 13:14:17,878] INFO: Template syntax validated successfully.
+[2025-06-15 13:14:18,093] INFO: No updates needed for: perimeterVPCstack
+[2025-06-15 13:14:18,093] INFO: [START] Deploying stack: gwlbStack
+[2025-06-15 13:14:18,176] INFO: Template syntax validated successfully.
+[2025-06-15 13:14:18,370] INFO: No updates needed for: gwlbStack
+[2025-06-15 13:14:18,370] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 13:14:18,456] INFO: Template syntax validated successfully.
+[2025-06-15 13:14:18,675] INFO: No updates needed for: securityGroupStack
+[2025-06-15 13:14:18,676] INFO: [START] Deploying stack: ngfwStack3
+[2025-06-15 13:14:18,774] INFO: Template syntax validated successfully.
+[2025-06-15 13:14:19,116] INFO: Create Stack initiated: ngfwStack3
+[2025-06-15 13:14:19,116] INFO: Waiting for stack 'ngfwStack3' to reach CREATE_COMPLETE...
+[2025-06-15 13:14:29,654] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:14:40,161] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:14:50,700] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:15:01,240] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:15:11,751] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:15:22,314] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:15:32,847] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:15:43,425] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:15:53,954] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:16:04,476] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:16:14,979] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:16:25,511] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:16:36,026] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:16:46,531] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:16:57,044] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:17:07,571] INFO: ngfwStack3 Status: DELETE_IN_PROGRESS
+[2025-06-15 13:17:18,110] INFO: ngfwStack3 Status: DELETE_IN_PROGRESS
+[2025-06-15 13:17:28,625] ERROR: Error fetching stack status: An error occurred (ValidationError) when calling the DescribeStacks operation: Stack with id ngfwStack3 does not exist
+[2025-06-15 13:17:28,626] ERROR: [FAILED] Deployment pipeline stopped: An error occurred (ValidationError) when calling the DescribeStacks operation: Stack with id ngfwStack3 does not exist
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 163, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters_path=stack.get("parameters")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 129, in deploy_stack
+    wait_for_stack_completion(stack_name, operation)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 143, in wait_for_stack_completion
+    stack = cf.describe_stacks(StackName=stack_name)['Stacks'][0]
+            ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 595, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 1058, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationError) when calling the DescribeStacks operation: Stack with id ngfwStack3 does not exist
+[2025-06-15 13:19:22,475] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 13:19:22,634] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 13:19:23,180] INFO: Template syntax validated successfully.
+[2025-06-15 13:19:23,416] INFO: No updates needed for: perimeterVPCstack
+[2025-06-15 13:19:23,416] INFO: [START] Deploying stack: gwlbStack
+[2025-06-15 13:19:23,500] INFO: Template syntax validated successfully.
+[2025-06-15 13:19:23,726] INFO: No updates needed for: gwlbStack
+[2025-06-15 13:19:23,726] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 13:19:23,796] INFO: Template syntax validated successfully.
+[2025-06-15 13:19:24,014] INFO: No updates needed for: securityGroupStack
+[2025-06-15 13:19:24,014] INFO: [START] Deploying stack: ngfwStack3
+[2025-06-15 13:19:24,105] ERROR: Template validation failed.
+[2025-06-15 13:19:24,106] ERROR: [FAILED] Deployment pipeline stopped: An error occurred (ValidationError) when calling the ValidateTemplate operation: Invalid template property or properties [LaunchTemplate]
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 163, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters_path=stack.get("parameters")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 93, in deploy_stack
+    validate_template(template_body)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 78, in validate_template
+    cf.validate_template(TemplateBody=template_body)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 595, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 1058, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationError) when calling the ValidateTemplate operation: Invalid template property or properties [LaunchTemplate]
+[2025-06-15 13:20:50,475] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 13:20:51,187] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 13:20:51,543] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 13:20:51,850] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 13:22:04,644] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 13:22:04,805] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 13:22:04,806] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 13:22:05,505] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 13:22:05,505] INFO: [START] Deploying stack: gwlbStack
+[2025-06-15 13:22:05,506] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 13:22:05,707] INFO: No updates needed for gwlbStack
+[2025-06-15 13:22:05,707] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 13:22:05,708] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 13:22:05,910] INFO: No updates needed for securityGroupStack
+[2025-06-15 13:22:05,910] INFO: [START] Deploying stack: ngfwStack3
+[2025-06-15 13:22:05,911] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-parameters.json
+[2025-06-15 13:22:06,173] ERROR: Failed to create_stack: An error occurred (ValidationError) when calling the CreateStack operation: Invalid template property or properties [AutoScalingGroup, LaunchTemplate]
+[2025-06-15 13:22:06,173] ERROR: [FAILED] Deployment pipeline stopped: An error occurred (ValidationError) when calling the CreateStack operation: Invalid template property or properties [AutoScalingGroup, LaunchTemplate]
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 161, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters_path=stack.get("parameters")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 103, in deploy_stack
+    response = cf.create_stack(
+        StackName=stack_name,
+    ...<4 lines>...
+        EnableTerminationProtection=False
+    )
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 595, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 1058, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationError) when calling the CreateStack operation: Invalid template property or properties [AutoScalingGroup, LaunchTemplate]
+[2025-06-15 13:23:05,341] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 13:23:05,495] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 13:23:05,496] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 13:23:06,175] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 13:23:06,175] INFO: [START] Deploying stack: gwlbStack
+[2025-06-15 13:23:06,176] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 13:23:06,369] INFO: No updates needed for gwlbStack
+[2025-06-15 13:23:06,369] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 13:23:06,370] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 13:23:06,586] INFO: No updates needed for securityGroupStack
+[2025-06-15 13:23:06,586] INFO: [START] Deploying stack: ngfwStack3
+[2025-06-15 13:23:06,587] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-parameters.json
+[2025-06-15 13:23:06,884] INFO: Create Stack initiated for ngfwStack3
+[2025-06-15 13:23:06,884] INFO: Waiting for stack 'ngfwStack3' to reach 'CREATE_COMPLETE'...
+[2025-06-15 13:23:17,415] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:23:27,933] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:23:38,441] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:23:48,940] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:23:59,460] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:24:09,985] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:24:20,517] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:24:31,026] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:24:41,531] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:24:52,047] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:25:02,598] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:25:13,166] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:25:23,713] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:25:34,250] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:25:44,765] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:25:55,278] INFO: ngfwStack3 Status: DELETE_IN_PROGRESS
+[2025-06-15 13:26:05,841] INFO: ngfwStack3 Status: DELETE_IN_PROGRESS
+[2025-06-15 13:26:16,323] ERROR: Error fetching stack status: An error occurred (ValidationError) when calling the DescribeStacks operation: Stack with id ngfwStack3 does not exist
+[2025-06-15 13:26:16,323] ERROR: [FAILED] Deployment pipeline stopped: An error occurred (ValidationError) when calling the DescribeStacks operation: Stack with id ngfwStack3 does not exist
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 161, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters_path=stack.get("parameters")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 126, in deploy_stack
+    wait_for_stack_completion(stack_name, operation)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 140, in wait_for_stack_completion
+    response = cf.describe_stacks(StackName=stack_name)
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 595, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 1058, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationError) when calling the DescribeStacks operation: Stack with id ngfwStack3 does not exist
+[2025-06-15 13:27:43,305] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 13:27:43,471] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 13:27:43,472] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 13:27:44,184] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 13:27:44,184] INFO: [START] Deploying stack: gwlbStack
+[2025-06-15 13:27:44,185] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 13:27:44,393] INFO: No updates needed for gwlbStack
+[2025-06-15 13:27:44,393] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 13:27:44,394] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 13:27:44,599] INFO: No updates needed for securityGroupStack
+[2025-06-15 13:27:44,599] INFO: [START] Deploying stack: ngfwStack3
+[2025-06-15 13:27:44,600] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-parameters.json
+[2025-06-15 13:27:44,894] INFO: Create Stack initiated for ngfwStack3
+[2025-06-15 13:27:44,894] INFO: Waiting for stack 'ngfwStack3' to reach 'CREATE_COMPLETE'...
+[2025-06-15 13:27:55,415] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:28:05,947] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:28:16,448] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:28:26,950] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:28:37,453] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:28:47,971] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:28:58,527] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:29:09,044] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:29:19,548] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:29:30,054] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:29:40,573] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:29:51,084] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:30:01,604] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:30:12,103] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:30:22,605] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:30:33,184] INFO: ngfwStack3 Status: DELETE_IN_PROGRESS
+[2025-06-15 13:30:43,691] INFO: ngfwStack3 Status: DELETE_IN_PROGRESS
+[2025-06-15 13:30:54,189] ERROR: Stack ngfwStack3 was deleted (likely due to OnFailure='DELETE').
+[2025-06-15 13:30:54,189] ERROR: [FAILED] Deployment pipeline stopped: Stack ngfwStack3 was deleted during creation. Check CloudFormation events for failure reason.
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 137, in wait_for_stack_completion
+    response = cf.describe_stacks(StackName=stack_name)
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 595, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 1058, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationError) when calling the DescribeStacks operation: Stack with id ngfwStack3 does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 163, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters_path=stack.get("parameters")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 123, in deploy_stack
+    wait_for_stack_completion(stack_name, operation)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 150, in wait_for_stack_completion
+    raise Exception(f"Stack {stack_name} was deleted during creation. Check CloudFormation events for failure reason.")
+Exception: Stack ngfwStack3 was deleted during creation. Check CloudFormation events for failure reason.
+[2025-06-15 13:45:45,168] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 13:45:45,338] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 13:45:45,338] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 13:45:46,074] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 13:45:46,074] INFO: [START] Deploying stack: gwlbStack
+[2025-06-15 13:45:46,075] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 13:45:46,299] INFO: No updates needed for gwlbStack
+[2025-06-15 13:45:46,299] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 13:45:46,300] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 13:45:46,529] INFO: No updates needed for securityGroupStack
+[2025-06-15 13:45:46,530] INFO: [START] Deploying stack: ngfwStack3
+[2025-06-15 13:45:46,530] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-parameters.json
+[2025-06-15 13:45:46,824] INFO: Create Stack initiated for ngfwStack3
+[2025-06-15 13:45:46,824] INFO: Waiting for stack 'ngfwStack3' to reach 'CREATE_COMPLETE'...
+[2025-06-15 13:45:57,325] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:46:07,829] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:46:18,360] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:46:28,881] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:46:39,403] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:46:49,921] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:47:00,441] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:47:10,941] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:47:21,454] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:47:31,975] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:47:42,501] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:47:53,019] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:48:03,538] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:48:14,042] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:48:24,574] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:48:35,081] INFO: ngfwStack3 Status: DELETE_IN_PROGRESS
+[2025-06-15 13:48:45,594] INFO: ngfwStack3 Status: DELETE_IN_PROGRESS
+[2025-06-15 13:48:56,069] ERROR: Stack ngfwStack3 was deleted (likely due to OnFailure='DELETE').
+[2025-06-15 13:48:56,069] ERROR: [FAILED] Deployment pipeline stopped: Stack ngfwStack3 was deleted during creation. Check CloudFormation events for failure reason.
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 137, in wait_for_stack_completion
+    response = cf.describe_stacks(StackName=stack_name)
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 595, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 1058, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationError) when calling the DescribeStacks operation: Stack with id ngfwStack3 does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 163, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters_path=stack.get("parameters")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 123, in deploy_stack
+    wait_for_stack_completion(stack_name, operation)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 150, in wait_for_stack_completion
+    raise Exception(f"Stack {stack_name} was deleted during creation. Check CloudFormation events for failure reason.")
+Exception: Stack ngfwStack3 was deleted during creation. Check CloudFormation events for failure reason.
+[2025-06-15 13:50:58,943] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 13:50:59,107] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 13:50:59,108] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 13:50:59,811] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 13:50:59,811] INFO: [START] Deploying stack: gwlbStack
+[2025-06-15 13:50:59,812] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 13:51:00,077] INFO: No updates needed for gwlbStack
+[2025-06-15 13:51:00,078] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 13:51:00,079] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 13:51:00,303] INFO: No updates needed for securityGroupStack
+[2025-06-15 13:51:00,303] INFO: [START] Deploying stack: ngfwStack3
+[2025-06-15 13:51:00,304] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-parameters.json
+[2025-06-15 13:51:00,708] INFO: Create Stack initiated for ngfwStack3
+[2025-06-15 13:51:00,709] INFO: Waiting for stack 'ngfwStack3' to reach 'CREATE_COMPLETE'...
+[2025-06-15 13:51:11,205] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:51:21,716] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:51:32,231] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:51:42,775] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:51:53,280] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:52:03,773] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:52:14,275] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:52:24,849] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:52:35,362] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:52:45,890] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:52:56,414] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:53:06,935] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:53:17,440] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:53:27,944] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:53:38,481] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:53:49,004] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:53:59,518] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:54:10,049] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:54:20,564] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:54:31,090] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:54:41,593] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:54:52,121] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:55:02,647] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:55:13,170] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:55:23,718] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:55:34,246] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:55:44,764] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:55:55,272] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:56:05,813] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:56:16,318] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:56:26,845] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:56:37,375] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:56:47,898] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:56:58,424] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:57:08,958] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:57:19,475] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:57:29,983] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:57:40,510] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:57:51,047] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:58:01,569] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:58:12,124] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:58:22,648] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:58:33,174] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:58:43,673] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:58:54,189] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:59:04,709] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:59:15,254] INFO: ngfwStack3 Status: CREATE_IN_PROGRESS
+[2025-06-15 13:59:25,822] INFO: ngfwStack3 Status: CREATE_COMPLETE
+[2025-06-15 13:59:25,823] INFO: [COMPLETE] Stack ngfwStack3 => CREATE_COMPLETE
+[2025-06-15 14:05:01,818] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 14:05:01,980] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 14:05:01,981] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 14:05:02,668] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 14:05:02,668] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 14:05:02,669] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 14:05:02,904] INFO: No updates needed for securityGroupStack
+[2025-06-15 14:05:02,905] INFO: [START] Deploying stack: ngfwStack3
+[2025-06-15 14:05:02,905] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-parameters.json
+[2025-06-15 14:05:03,118] INFO: No updates needed for ngfwStack3
+[2025-06-15 14:05:03,119] INFO: [START] Deploying stack: gwlbStack
+[2025-06-15 14:05:03,120] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 14:05:03,336] INFO: No updates needed for gwlbStack
+[2025-06-15 14:20:00,268] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 14:20:00,430] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 14:20:00,431] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 14:20:01,317] INFO: Create Stack initiated for perimeterVPCstack
+[2025-06-15 14:20:01,317] INFO: Waiting for stack 'perimeterVPCstack' to reach 'CREATE_COMPLETE'...
+[2025-06-15 14:20:11,831] INFO: perimeterVPCstack Status: CREATE_IN_PROGRESS
+[2025-06-15 14:20:22,348] INFO: perimeterVPCstack Status: CREATE_IN_PROGRESS
+[2025-06-15 14:20:32,848] INFO: perimeterVPCstack Status: CREATE_COMPLETE
+[2025-06-15 14:20:32,848] INFO: [COMPLETE] Stack perimeterVPCstack => CREATE_COMPLETE
+[2025-06-15 14:26:28,789] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 14:26:28,978] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 14:26:28,979] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 14:26:29,752] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 14:26:51,414] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 14:26:51,571] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 14:26:51,572] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 14:26:52,315] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 14:26:52,315] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 14:26:52,316] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 14:26:52,506] ERROR: Failed to create_stack: An error occurred (ValidationError) when calling the CreateStack operation: Parameters: [VpcId] must have values
+[2025-06-15 14:26:52,507] ERROR: [FAILED] Deployment pipeline stopped: An error occurred (ValidationError) when calling the CreateStack operation: Parameters: [VpcId] must have values
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 163, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters_path=stack.get("parameters")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 100, in deploy_stack
+    response = cf.create_stack(
+        StackName=stack_name,
+    ...<4 lines>...
+        EnableTerminationProtection=False
+    )
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 595, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 1058, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationError) when calling the CreateStack operation: Parameters: [VpcId] must have values
+[2025-06-15 14:29:30,383] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 14:29:30,548] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 14:29:30,548] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 14:29:31,298] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 14:29:31,299] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 14:29:31,299] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 14:29:31,466] ERROR: Failed to create_stack: An error occurred (ValidationError) when calling the CreateStack operation: Parameters: [TGWSubnetCidrs, Owner, GWLBSubnetCidrs, VpcCidr, AvailabilityZones, BusinessUnit, Region, PublicSubnetCidrs, GWLBeSubnetCidrs, SecuritySubnetCidrs] do not exist in the template
+[2025-06-15 14:29:31,467] ERROR: [FAILED] Deployment pipeline stopped: An error occurred (ValidationError) when calling the CreateStack operation: Parameters: [TGWSubnetCidrs, Owner, GWLBSubnetCidrs, VpcCidr, AvailabilityZones, BusinessUnit, Region, PublicSubnetCidrs, GWLBeSubnetCidrs, SecuritySubnetCidrs] do not exist in the template
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 163, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters_path=stack.get("parameters")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 100, in deploy_stack
+    response = cf.create_stack(
+        StackName=stack_name,
+    ...<4 lines>...
+        EnableTerminationProtection=False
+    )
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 595, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 1058, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationError) when calling the CreateStack operation: Parameters: [TGWSubnetCidrs, Owner, GWLBSubnetCidrs, VpcCidr, AvailabilityZones, BusinessUnit, Region, PublicSubnetCidrs, GWLBeSubnetCidrs, SecuritySubnetCidrs] do not exist in the template
+[2025-06-15 14:30:28,847] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 14:30:29,010] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 14:30:29,011] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 14:30:29,749] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 14:30:29,749] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 14:30:29,750] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 14:30:30,059] INFO: Create Stack initiated for securityGroupStack
+[2025-06-15 14:30:30,059] INFO: Waiting for stack 'securityGroupStack' to reach 'CREATE_COMPLETE'...
+[2025-06-15 14:30:40,590] ERROR: Stack securityGroupStack was deleted (likely due to OnFailure='DELETE').
+[2025-06-15 14:30:40,590] ERROR: [FAILED] Deployment pipeline stopped: Stack securityGroupStack was deleted during creation. Check CloudFormation events for failure reason.
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 137, in wait_for_stack_completion
+    response = cf.describe_stacks(StackName=stack_name)
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 595, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 1058, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationError) when calling the DescribeStacks operation: Stack with id securityGroupStack does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 163, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters_path=stack.get("parameters")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 123, in deploy_stack
+    wait_for_stack_completion(stack_name, operation)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 150, in wait_for_stack_completion
+    raise Exception(f"Stack {stack_name} was deleted during creation. Check CloudFormation events for failure reason.")
+Exception: Stack securityGroupStack was deleted during creation. Check CloudFormation events for failure reason.
+[2025-06-15 14:31:17,820] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 14:31:17,976] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 14:31:17,977] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 14:31:18,762] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 14:31:18,762] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 14:31:18,763] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 14:31:19,097] INFO: Create Stack initiated for securityGroupStack
+[2025-06-15 14:31:19,097] INFO: Waiting for stack 'securityGroupStack' to reach 'CREATE_COMPLETE'...
+[2025-06-15 14:31:29,604] ERROR: Stack securityGroupStack was deleted (likely due to OnFailure='DELETE').
+[2025-06-15 14:31:29,605] ERROR: [FAILED] Deployment pipeline stopped: Stack securityGroupStack was deleted during creation. Check CloudFormation events for failure reason.
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 137, in wait_for_stack_completion
+    response = cf.describe_stacks(StackName=stack_name)
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 595, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 1058, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationError) when calling the DescribeStacks operation: Stack with id securityGroupStack does not exist
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 163, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters_path=stack.get("parameters")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 123, in deploy_stack
+    wait_for_stack_completion(stack_name, operation)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 150, in wait_for_stack_completion
+    raise Exception(f"Stack {stack_name} was deleted during creation. Check CloudFormation events for failure reason.")
+Exception: Stack securityGroupStack was deleted during creation. Check CloudFormation events for failure reason.
+[2025-06-15 14:32:14,171] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 14:32:14,329] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 14:32:14,330] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 14:32:15,103] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 14:32:15,103] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 14:32:15,104] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 14:32:15,398] INFO: Create Stack initiated for securityGroupStack
+[2025-06-15 14:32:15,398] INFO: Waiting for stack 'securityGroupStack' to reach 'CREATE_COMPLETE'...
+[2025-06-15 14:32:25,959] INFO: securityGroupStack Status: CREATE_FAILED
+[2025-06-15 14:32:25,959] ERROR: [FAILED] Deployment pipeline stopped: Stack securityGroupStack failed with status: CREATE_FAILED
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 163, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters_path=stack.get("parameters")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 123, in deploy_stack
+    wait_for_stack_completion(stack_name, operation)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 145, in wait_for_stack_completion
+    raise Exception(f"Stack {stack_name} failed with status: {status}")
+Exception: Stack securityGroupStack failed with status: CREATE_FAILED
+[2025-06-15 14:33:40,907] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 14:33:41,079] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 14:33:41,823] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 14:33:41,826] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 14:33:41,982] ERROR: [FAILED] Deployment pipeline stopped: No export named Security-Perimeter-VpcId found
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 180, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters_path=stack.get("parameters")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 107, in deploy_stack
+    parameters = override_parameters(parameters, STACK_EXPORTS[stack_name])
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 89, in override_parameters
+    resolved = get_export_value(export)
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 69, in get_export_value
+    raise ValueError(f"No export named {export_name} found")
+ValueError: No export named Security-Perimeter-VpcId found
+[2025-06-15 14:37:59,818] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 14:37:59,975] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 14:37:59,976] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 14:38:00,703] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 14:38:00,704] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 14:38:00,821] ERROR: [FAILED] Deployment pipeline stopped: Export Security-Perimeter-VpcId not found.
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 198, in <module>
+    vpc_id = get_export_value(f"{PROJECT_NAME}-VpcId")
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 86, in get_export_value
+    raise Exception(f"Export {export_name} not found.")
+Exception: Export Security-Perimeter-VpcId not found.
+[2025-06-15 14:43:38,222] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 14:43:38,381] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 14:43:38,381] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 14:43:39,119] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 14:43:39,119] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 14:43:39,236] ERROR: [FAILED] Deployment pipeline stopped: Export Security-Perimeter-VpcId not found.
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 198, in <module>
+    vpc_id = get_export_value(f"{PROJECT_NAME}-VpcId")
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 86, in get_export_value
+    raise Exception(f"Export {export_name} not found.")
+Exception: Export Security-Perimeter-VpcId not found.
+[2025-06-15 14:45:26,895] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 14:45:27,052] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 14:45:27,052] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 14:45:27,809] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 14:45:27,810] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 14:45:27,928] ERROR: [FAILED] Deployment pipeline stopped: Export Security-Perimeter-VpcId not found.
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 198, in <module>
+    vpc_id = get_export_value(f"{PROJECT_NAME}-VpcId")
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 86, in get_export_value
+    raise Exception(f"Export {export_name} not found.")
+Exception: Export Security-Perimeter-VpcId not found.
+[2025-06-15 14:46:58,389] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 14:46:58,546] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 14:46:58,546] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 14:46:59,307] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 14:46:59,307] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 14:46:59,307] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 14:46:59,479] ERROR: Failed to update_stack stack securityGroupStack: An error occurred (ValidationError) when calling the UpdateStack operation: This stack cannot be updated from [CREATE_FAILED] state because it contains [on-failure: DO_NOTHING]. Please use disable-rollback option instead during stack creation.
+[2025-06-15 14:46:59,479] ERROR: [FAILED] Deployment pipeline stopped: An error occurred (ValidationError) when calling the UpdateStack operation: This stack cannot be updated from [CREATE_FAILED] state because it contains [on-failure: DO_NOTHING]. Please use disable-rollback option instead during stack creation.
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 156, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters=parameters
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 101, in deploy_stack
+    cf.update_stack(
+    ~~~~~~~~~~~~~~~^
+        StackName=stack_name,
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        Capabilities=['CAPABILITY_NAMED_IAM']
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 595, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 1058, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationError) when calling the UpdateStack operation: This stack cannot be updated from [CREATE_FAILED] state because it contains [on-failure: DO_NOTHING]. Please use disable-rollback option instead during stack creation.
+[2025-06-15 14:47:28,802] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 14:47:28,962] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 14:47:28,962] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 14:47:29,752] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 14:47:29,752] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 14:47:29,753] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 14:47:29,928] ERROR: Failed to create_stack stack securityGroupStack: An error occurred (ValidationError) when calling the CreateStack operation: Parameters: [VpcId] must have values
+[2025-06-15 14:47:29,929] ERROR: [FAILED] Deployment pipeline stopped: An error occurred (ValidationError) when calling the CreateStack operation: Parameters: [VpcId] must have values
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 156, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters=parameters
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 92, in deploy_stack
+    cf.create_stack(
+    ~~~~~~~~~~~~~~~^
+        StackName=stack_name,
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        EnableTerminationProtection=False
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 595, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 1058, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationError) when calling the CreateStack operation: Parameters: [VpcId] must have values
+[2025-06-15 14:48:25,117] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 14:48:25,277] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 14:48:25,277] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 14:48:26,008] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 14:48:26,008] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 14:48:26,009] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 14:48:26,320] INFO: Create Stack initiated for securityGroupStack
+[2025-06-15 14:48:26,321] INFO: Waiting for stack 'securityGroupStack' to reach 'CREATE_COMPLETE'...
+[2025-06-15 14:48:36,864] INFO: securityGroupStack Status: CREATE_FAILED
+[2025-06-15 14:48:36,864] ERROR: [FAILED] Deployment pipeline stopped: Stack securityGroupStack failed with status: CREATE_FAILED
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 156, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters=parameters
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 115, in deploy_stack
+    wait_for_stack_completion(stack_name, operation)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 137, in wait_for_stack_completion
+    raise Exception(f"Stack {stack_name} failed with status: {status}")
+Exception: Stack securityGroupStack failed with status: CREATE_FAILED
+[2025-06-15 14:49:50,171] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 14:49:50,329] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 14:49:50,329] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 14:49:51,064] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 14:49:51,065] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 14:49:51,065] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 14:49:51,250] ERROR: Failed to update_stack stack securityGroupStack: An error occurred (ValidationError) when calling the UpdateStack operation: This stack cannot be updated from [CREATE_FAILED] state because it contains [on-failure: DO_NOTHING]. Please use disable-rollback option instead during stack creation.
+[2025-06-15 14:49:51,251] ERROR: [FAILED] Deployment pipeline stopped: An error occurred (ValidationError) when calling the UpdateStack operation: This stack cannot be updated from [CREATE_FAILED] state because it contains [on-failure: DO_NOTHING]. Please use disable-rollback option instead during stack creation.
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 156, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters=parameters
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 101, in deploy_stack
+    cf.update_stack(
+    ~~~~~~~~~~~~~~~^
+        StackName=stack_name,
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        Capabilities=['CAPABILITY_NAMED_IAM']
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 595, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 1058, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationError) when calling the UpdateStack operation: This stack cannot be updated from [CREATE_FAILED] state because it contains [on-failure: DO_NOTHING]. Please use disable-rollback option instead during stack creation.
+[2025-06-15 14:50:10,103] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 14:50:10,261] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 14:50:10,262] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 14:50:11,054] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 14:50:11,055] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 14:50:11,055] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 14:50:11,381] INFO: Create Stack initiated for securityGroupStack
+[2025-06-15 14:50:11,381] INFO: Waiting for stack 'securityGroupStack' to reach 'CREATE_COMPLETE'...
+[2025-06-15 14:50:21,897] INFO: securityGroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 14:50:32,423] INFO: securityGroupStack Status: CREATE_COMPLETE
+[2025-06-15 14:50:32,424] INFO: [COMPLETE] Stack securityGroupStack => CREATE_COMPLETE
+[2025-06-15 14:51:49,235] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 14:51:49,400] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 14:51:49,400] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 14:51:50,149] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 14:51:50,150] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 14:51:50,150] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 14:51:50,396] INFO: No updates needed for securityGroupStack
+[2025-06-15 14:51:50,396] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 14:51:50,397] INFO: [START] Deploying stack: gwlbGroupStack
+[2025-06-15 14:51:50,732] INFO: Create Stack initiated for gwlbGroupStack
+[2025-06-15 14:51:50,732] INFO: Waiting for stack 'gwlbGroupStack' to reach 'CREATE_COMPLETE'...
+[2025-06-15 14:52:01,250] INFO: gwlbGroupStack Status: CREATE_FAILED
+[2025-06-15 14:52:01,251] ERROR: [FAILED] Deployment pipeline stopped: Stack gwlbGroupStack failed with status: CREATE_FAILED
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 161, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters=parameters
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 120, in deploy_stack
+    wait_for_stack_completion(stack_name, operation)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 142, in wait_for_stack_completion
+    raise Exception(f"Stack {stack_name} failed with status: {status}")
+Exception: Stack gwlbGroupStack failed with status: CREATE_FAILED
+[2025-06-15 14:53:39,278] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 14:53:39,436] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 14:53:39,436] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 14:53:40,154] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 14:53:40,155] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 14:53:40,155] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 14:53:40,373] INFO: No updates needed for securityGroupStack
+[2025-06-15 14:53:40,374] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 14:53:40,374] INFO: [START] Deploying stack: gwlbGroupStack
+[2025-06-15 14:53:40,563] ERROR: Failed to update_stack stack gwlbGroupStack: An error occurred (ValidationError) when calling the UpdateStack operation: This stack cannot be updated from [CREATE_FAILED] state because it contains [on-failure: DO_NOTHING]. Please use disable-rollback option instead during stack creation.
+[2025-06-15 14:53:40,564] ERROR: [FAILED] Deployment pipeline stopped: An error occurred (ValidationError) when calling the UpdateStack operation: This stack cannot be updated from [CREATE_FAILED] state because it contains [on-failure: DO_NOTHING]. Please use disable-rollback option instead during stack creation.
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 161, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters=parameters
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 106, in deploy_stack
+    cf.update_stack(
+    ~~~~~~~~~~~~~~~^
+        StackName=stack_name,
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        Capabilities=['CAPABILITY_NAMED_IAM']
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 595, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 1058, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationError) when calling the UpdateStack operation: This stack cannot be updated from [CREATE_FAILED] state because it contains [on-failure: DO_NOTHING]. Please use disable-rollback option instead during stack creation.
+[2025-06-15 14:54:17,867] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 14:54:18,024] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 14:54:18,025] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 14:54:18,743] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 14:54:18,743] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 14:54:18,743] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 14:54:18,956] INFO: No updates needed for securityGroupStack
+[2025-06-15 14:54:18,956] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 14:54:18,957] INFO: [START] Deploying stack: gwlbGroupStack
+[2025-06-15 14:54:19,261] INFO: Create Stack initiated for gwlbGroupStack
+[2025-06-15 14:54:19,261] INFO: Waiting for stack 'gwlbGroupStack' to reach 'CREATE_COMPLETE'...
+[2025-06-15 14:54:29,810] INFO: gwlbGroupStack Status: CREATE_FAILED
+[2025-06-15 14:54:29,810] ERROR: [FAILED] Deployment pipeline stopped: Stack gwlbGroupStack failed with status: CREATE_FAILED
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 161, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters=parameters
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 120, in deploy_stack
+    wait_for_stack_completion(stack_name, operation)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 142, in wait_for_stack_completion
+    raise Exception(f"Stack {stack_name} failed with status: {status}")
+Exception: Stack gwlbGroupStack failed with status: CREATE_FAILED
+[2025-06-15 15:03:49,943] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 15:03:50,106] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 15:03:50,106] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 15:03:50,886] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 15:03:50,887] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 15:03:50,887] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 15:03:51,121] INFO: No updates needed for securityGroupStack
+[2025-06-15 15:03:51,122] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 15:03:51,122] INFO: [START] Deploying stack: gwlbGroupStack
+[2025-06-15 15:03:51,294] ERROR: Failed to update_stack stack gwlbGroupStack: An error occurred (ValidationError) when calling the UpdateStack operation: This stack cannot be updated from [CREATE_FAILED] state because it contains [on-failure: DO_NOTHING]. Please use disable-rollback option instead during stack creation.
+[2025-06-15 15:03:51,295] ERROR: [FAILED] Deployment pipeline stopped: An error occurred (ValidationError) when calling the UpdateStack operation: This stack cannot be updated from [CREATE_FAILED] state because it contains [on-failure: DO_NOTHING]. Please use disable-rollback option instead during stack creation.
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 165, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters=parameters
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 110, in deploy_stack
+    cf.update_stack(
+    ~~~~~~~~~~~~~~~^
+        StackName=stack_name,
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        Capabilities=['CAPABILITY_NAMED_IAM']
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 595, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 1058, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationError) when calling the UpdateStack operation: This stack cannot be updated from [CREATE_FAILED] state because it contains [on-failure: DO_NOTHING]. Please use disable-rollback option instead during stack creation.
+[2025-06-15 15:04:30,631] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 15:04:30,790] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 15:04:30,790] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 15:04:31,497] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 15:04:31,498] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 15:04:31,498] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 15:04:31,696] INFO: No updates needed for securityGroupStack
+[2025-06-15 15:04:31,697] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 15:04:31,697] INFO: [START] Deploying stack: gwlbGroupStack
+[2025-06-15 15:04:31,870] ERROR: Failed to update_stack stack gwlbGroupStack: An error occurred (ValidationError) when calling the UpdateStack operation: This stack cannot be updated from [CREATE_FAILED] state because it contains [on-failure: DO_NOTHING]. Please use disable-rollback option instead during stack creation.
+[2025-06-15 15:04:31,870] ERROR: [FAILED] Deployment pipeline stopped: An error occurred (ValidationError) when calling the UpdateStack operation: This stack cannot be updated from [CREATE_FAILED] state because it contains [on-failure: DO_NOTHING]. Please use disable-rollback option instead during stack creation.
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 161, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters=parameters
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 106, in deploy_stack
+    cf.update_stack(
+    ~~~~~~~~~~~~~~~^
+        StackName=stack_name,
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        Capabilities=['CAPABILITY_NAMED_IAM']
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 595, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 1058, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationError) when calling the UpdateStack operation: This stack cannot be updated from [CREATE_FAILED] state because it contains [on-failure: DO_NOTHING]. Please use disable-rollback option instead during stack creation.
+[2025-06-15 15:05:04,538] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 15:05:04,705] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 15:05:04,706] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 15:05:05,456] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 15:05:05,456] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 15:05:05,456] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 15:05:05,673] INFO: No updates needed for securityGroupStack
+[2025-06-15 15:05:05,673] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 15:05:05,674] INFO: [START] Deploying stack: gwlbGroupStack
+[2025-06-15 15:05:05,871] ERROR: Failed to update_stack stack gwlbGroupStack: An error occurred (ValidationError) when calling the UpdateStack operation: Stack:arn:aws:cloudformation:ap-southeast-1:975050199901:stack/gwlbGroupStack/8fda6c10-49b5-11f0-85dd-0ab2a8658d0d is in DELETE_IN_PROGRESS state and can not be updated.
+[2025-06-15 15:05:05,871] ERROR: [FAILED] Deployment pipeline stopped: An error occurred (ValidationError) when calling the UpdateStack operation: Stack:arn:aws:cloudformation:ap-southeast-1:975050199901:stack/gwlbGroupStack/8fda6c10-49b5-11f0-85dd-0ab2a8658d0d is in DELETE_IN_PROGRESS state and can not be updated.
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 161, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters=parameters
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 106, in deploy_stack
+    cf.update_stack(
+    ~~~~~~~~~~~~~~~^
+        StackName=stack_name,
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        Capabilities=['CAPABILITY_NAMED_IAM']
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 595, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 1058, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationError) when calling the UpdateStack operation: Stack:arn:aws:cloudformation:ap-southeast-1:975050199901:stack/gwlbGroupStack/8fda6c10-49b5-11f0-85dd-0ab2a8658d0d is in DELETE_IN_PROGRESS state and can not be updated.
+[2025-06-15 15:05:46,843] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 15:05:47,011] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 15:05:47,012] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 15:05:47,772] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 15:05:47,773] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 15:05:47,773] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 15:05:47,978] INFO: No updates needed for securityGroupStack
+[2025-06-15 15:05:47,979] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 15:05:47,979] INFO: [START] Deploying stack: gwlbGroupStack
+[2025-06-15 15:05:48,147] ERROR: Failed to update_stack stack gwlbGroupStack: An error occurred (ValidationError) when calling the UpdateStack operation: Stack:arn:aws:cloudformation:ap-southeast-1:975050199901:stack/gwlbGroupStack/8fda6c10-49b5-11f0-85dd-0ab2a8658d0d is in DELETE_IN_PROGRESS state and can not be updated.
+[2025-06-15 15:05:48,148] ERROR: [FAILED] Deployment pipeline stopped: An error occurred (ValidationError) when calling the UpdateStack operation: Stack:arn:aws:cloudformation:ap-southeast-1:975050199901:stack/gwlbGroupStack/8fda6c10-49b5-11f0-85dd-0ab2a8658d0d is in DELETE_IN_PROGRESS state and can not be updated.
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 161, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters=parameters
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 106, in deploy_stack
+    cf.update_stack(
+    ~~~~~~~~~~~~~~~^
+        StackName=stack_name,
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        Capabilities=['CAPABILITY_NAMED_IAM']
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 595, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 1058, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationError) when calling the UpdateStack operation: Stack:arn:aws:cloudformation:ap-southeast-1:975050199901:stack/gwlbGroupStack/8fda6c10-49b5-11f0-85dd-0ab2a8658d0d is in DELETE_IN_PROGRESS state and can not be updated.
+[2025-06-15 15:07:16,401] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 15:07:16,561] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 15:07:16,561] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 15:07:17,281] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 15:07:17,282] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 15:07:17,282] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 15:07:17,507] INFO: No updates needed for securityGroupStack
+[2025-06-15 15:07:17,508] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 15:07:17,508] INFO: [START] Deploying stack: gwlbGroupStack
+[2025-06-15 15:07:17,668] ERROR: Failed to create_stack stack gwlbGroupStack: An error occurred (ValidationError) when calling the CreateStack operation: Template format error: YAML not well-formed. (line 33, column 3)
+[2025-06-15 15:07:17,668] ERROR: [FAILED] Deployment pipeline stopped: An error occurred (ValidationError) when calling the CreateStack operation: Template format error: YAML not well-formed. (line 33, column 3)
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 161, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters=parameters
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 97, in deploy_stack
+    cf.create_stack(
+    ~~~~~~~~~~~~~~~^
+        StackName=stack_name,
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        EnableTerminationProtection=False
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 595, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 1058, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationError) when calling the CreateStack operation: Template format error: YAML not well-formed. (line 33, column 3)
+[2025-06-15 15:07:58,310] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 15:07:58,476] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 15:07:58,476] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 15:07:59,188] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 15:07:59,188] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 15:07:59,188] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 15:07:59,403] INFO: No updates needed for securityGroupStack
+[2025-06-15 15:07:59,403] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 15:07:59,403] INFO: [START] Deploying stack: gwlbGroupStack
+[2025-06-15 15:07:59,674] INFO: Create Stack initiated for gwlbGroupStack
+[2025-06-15 15:07:59,674] INFO: Waiting for stack 'gwlbGroupStack' to reach 'CREATE_COMPLETE'...
+[2025-06-15 15:08:10,173] INFO: gwlbGroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:08:20,697] INFO: gwlbGroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:08:31,203] INFO: gwlbGroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:08:41,718] INFO: gwlbGroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:08:52,251] INFO: gwlbGroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:09:02,801] INFO: gwlbGroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:09:13,348] INFO: gwlbGroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:09:23,902] INFO: gwlbGroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:09:34,430] INFO: gwlbGroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:09:44,957] INFO: gwlbGroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:09:55,479] INFO: gwlbGroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:10:05,997] INFO: gwlbGroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:10:16,515] INFO: gwlbGroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:10:27,061] INFO: gwlbGroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:10:37,575] INFO: gwlbGroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:10:48,132] INFO: gwlbGroupStack Status: CREATE_COMPLETE
+[2025-06-15 15:10:48,133] INFO: [COMPLETE] Stack gwlbGroupStack => CREATE_COMPLETE
+[2025-06-15 15:16:55,699] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 15:16:56,224] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 15:16:56,224] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 15:17:30,743] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 15:17:30,744] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 15:17:30,744] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 15:17:30,982] INFO: No updates needed for securityGroupStack
+[2025-06-15 15:17:30,982] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 15:17:30,982] INFO: [START] Deploying stack: gwlbGroupStack
+[2025-06-15 15:17:31,187] INFO: No updates needed for gwlbGroupStack
+[2025-06-15 15:18:26,867] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 15:18:27,021] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 15:18:27,021] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 15:18:27,756] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 15:18:27,757] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 15:18:27,757] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 15:18:27,987] INFO: No updates needed for securityGroupStack
+[2025-06-15 15:18:27,988] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 15:18:27,988] INFO: [START] Deploying stack: gwlbGroupStack
+[2025-06-15 15:18:28,206] INFO: No updates needed for gwlbGroupStack
+[2025-06-15 15:18:28,207] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-parameters.json
+[2025-06-15 15:18:28,207] INFO: [START] Deploying stack: ec2GroupStack
+[2025-06-15 15:18:28,512] INFO: Create Stack initiated for ec2GroupStack
+[2025-06-15 15:18:28,512] INFO: Waiting for stack 'ec2GroupStack' to reach 'CREATE_COMPLETE'...
+[2025-06-15 15:18:39,018] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:18:49,523] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:19:00,032] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:19:10,535] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:19:21,024] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:19:31,550] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:19:42,065] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:19:52,555] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:20:03,056] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:20:13,596] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:20:24,116] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:20:34,606] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:20:45,098] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:20:55,617] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:21:06,101] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:21:16,607] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:21:27,127] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:21:37,630] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:21:48,120] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:21:58,613] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:22:09,112] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:22:19,628] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:22:30,147] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:22:40,648] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:22:51,140] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:23:01,632] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:23:12,125] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:23:22,639] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:23:33,148] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:23:43,652] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:23:54,152] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:24:04,666] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:24:15,199] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:24:25,720] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:24:36,225] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:24:46,747] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:24:57,241] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:25:07,734] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:25:18,226] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:25:28,769] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:25:39,277] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:25:49,775] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:26:00,301] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:26:10,789] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:26:21,306] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:26:31,838] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:26:42,333] INFO: ec2GroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 15:26:52,823] INFO: ec2GroupStack Status: CREATE_COMPLETE
+[2025-06-15 15:26:52,823] INFO: [COMPLETE] Stack ec2GroupStack => CREATE_COMPLETE
+[2025-06-15 15:32:52,941] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 15:32:53,181] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 15:32:53,181] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 15:32:53,902] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 15:32:53,909] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 15:32:53,909] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 15:32:54,108] INFO: No updates needed for securityGroupStack
+[2025-06-15 15:32:54,108] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 15:32:54,109] INFO: [START] Deploying stack: gwlbGroupStack
+[2025-06-15 15:32:54,341] INFO: No updates needed for gwlbGroupStack
+[2025-06-15 15:32:54,342] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-parameters.json
+[2025-06-15 15:32:54,342] INFO: [START] Deploying stack: ec2GroupStack
+[2025-06-15 15:32:54,593] INFO: No updates needed for ec2GroupStack
+[2025-06-15 15:32:54,594] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlbe-parameters.json
+[2025-06-15 15:32:54,594] INFO: [START] Deploying stack: gwblbeGroupStack
+[2025-06-15 15:32:54,880] INFO: Create Stack initiated for gwblbeGroupStack
+[2025-06-15 15:32:54,881] INFO: Waiting for stack 'gwblbeGroupStack' to reach 'CREATE_COMPLETE'...
+[2025-06-15 15:33:05,399] INFO: gwblbeGroupStack Status: CREATE_FAILED
+[2025-06-15 15:33:05,399] ERROR: [FAILED] Deployment pipeline stopped: Stack gwblbeGroupStack failed with status: CREATE_FAILED
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 171, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters=parameters
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 130, in deploy_stack
+    wait_for_stack_completion(stack_name, operation)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 152, in wait_for_stack_completion
+    raise Exception(f"Stack {stack_name} failed with status: {status}")
+Exception: Stack gwblbeGroupStack failed with status: CREATE_FAILED
+[2025-06-15 15:35:42,645] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 15:35:42,805] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 15:35:42,805] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 15:35:43,539] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 15:35:43,540] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 15:35:43,540] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 15:35:43,754] INFO: No updates needed for securityGroupStack
+[2025-06-15 15:35:43,755] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 15:35:43,755] INFO: [START] Deploying stack: gwlbGroupStack
+[2025-06-15 15:35:44,030] INFO: Update Stack initiated for gwlbGroupStack
+[2025-06-15 15:35:44,031] INFO: Waiting for stack 'gwlbGroupStack' to reach 'UPDATE_COMPLETE'...
+[2025-06-15 15:35:54,566] INFO: gwlbGroupStack Status: UPDATE_ROLLBACK_COMPLETE
+[2025-06-15 15:35:54,567] ERROR: [FAILED] Deployment pipeline stopped: Stack gwlbGroupStack failed with status: UPDATE_ROLLBACK_COMPLETE
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 171, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters=parameters
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 130, in deploy_stack
+    wait_for_stack_completion(stack_name, operation)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 152, in wait_for_stack_completion
+    raise Exception(f"Stack {stack_name} failed with status: {status}")
+Exception: Stack gwlbGroupStack failed with status: UPDATE_ROLLBACK_COMPLETE
+[2025-06-15 15:38:17,185] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 15:38:17,337] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 15:38:17,337] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 15:38:18,037] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 15:38:18,038] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 15:38:18,038] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 15:38:18,264] INFO: No updates needed for securityGroupStack
+[2025-06-15 15:38:18,264] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 15:38:18,264] INFO: [START] Deploying stack: gwlbGroupStack
+[2025-06-15 15:38:18,475] INFO: No updates needed for gwlbGroupStack
+[2025-06-15 15:38:18,476] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-parameters.json
+[2025-06-15 15:38:18,476] INFO: [START] Deploying stack: ec2GroupStack
+[2025-06-15 15:38:18,701] INFO: No updates needed for ec2GroupStack
+[2025-06-15 15:38:18,702] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlbe-parameters.json
+[2025-06-15 15:38:18,702] INFO: [START] Deploying stack: gwblbeGroupStack
+[2025-06-15 15:38:18,869] ERROR: Failed to update_stack stack gwblbeGroupStack: An error occurred (ValidationError) when calling the UpdateStack operation: This stack cannot be updated from [CREATE_FAILED] state because it contains [on-failure: DO_NOTHING]. Please use disable-rollback option instead during stack creation.
+[2025-06-15 15:38:18,869] ERROR: [FAILED] Deployment pipeline stopped: An error occurred (ValidationError) when calling the UpdateStack operation: This stack cannot be updated from [CREATE_FAILED] state because it contains [on-failure: DO_NOTHING]. Please use disable-rollback option instead during stack creation.
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 171, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters=parameters
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 116, in deploy_stack
+    cf.update_stack(
+    ~~~~~~~~~~~~~~~^
+        StackName=stack_name,
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        Capabilities=['CAPABILITY_NAMED_IAM']
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 595, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 1058, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationError) when calling the UpdateStack operation: This stack cannot be updated from [CREATE_FAILED] state because it contains [on-failure: DO_NOTHING]. Please use disable-rollback option instead during stack creation.
+[2025-06-15 15:39:26,741] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 15:39:26,898] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 15:39:26,898] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 15:39:27,661] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 15:39:27,662] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 15:39:27,662] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 15:39:27,890] INFO: No updates needed for securityGroupStack
+[2025-06-15 15:39:27,891] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 15:39:27,891] INFO: [START] Deploying stack: gwlbGroupStack
+[2025-06-15 15:39:28,222] INFO: Update Stack initiated for gwlbGroupStack
+[2025-06-15 15:39:28,222] INFO: Waiting for stack 'gwlbGroupStack' to reach 'UPDATE_COMPLETE'...
+[2025-06-15 15:39:38,781] INFO: gwlbGroupStack Status: UPDATE_IN_PROGRESS
+[2025-06-15 15:39:49,309] INFO: gwlbGroupStack Status: UPDATE_IN_PROGRESS
+[2025-06-15 15:39:59,811] INFO: gwlbGroupStack Status: UPDATE_IN_PROGRESS
+[2025-06-15 15:40:10,341] INFO: gwlbGroupStack Status: UPDATE_IN_PROGRESS
+[2025-06-15 15:40:20,861] INFO: gwlbGroupStack Status: UPDATE_IN_PROGRESS
+[2025-06-15 15:40:31,384] INFO: gwlbGroupStack Status: UPDATE_IN_PROGRESS
+[2025-06-15 15:40:41,898] INFO: gwlbGroupStack Status: UPDATE_IN_PROGRESS
+[2025-06-15 15:40:52,395] INFO: gwlbGroupStack Status: UPDATE_IN_PROGRESS
+[2025-06-15 15:41:02,892] INFO: gwlbGroupStack Status: UPDATE_IN_PROGRESS
+[2025-06-15 15:41:13,409] INFO: gwlbGroupStack Status: UPDATE_IN_PROGRESS
+[2025-06-15 15:41:23,958] INFO: gwlbGroupStack Status: UPDATE_IN_PROGRESS
+[2025-06-15 15:41:34,465] INFO: gwlbGroupStack Status: UPDATE_IN_PROGRESS
+[2025-06-15 15:41:45,083] INFO: gwlbGroupStack Status: UPDATE_COMPLETE_CLEANUP_IN_PROGRESS
+[2025-06-15 15:41:55,581] INFO: gwlbGroupStack Status: UPDATE_COMPLETE_CLEANUP_IN_PROGRESS
+[2025-06-15 15:42:06,096] INFO: gwlbGroupStack Status: UPDATE_COMPLETE_CLEANUP_IN_PROGRESS
+[2025-06-15 15:42:16,580] INFO: gwlbGroupStack Status: UPDATE_COMPLETE_CLEANUP_IN_PROGRESS
+[2025-06-15 15:42:27,096] INFO: gwlbGroupStack Status: UPDATE_COMPLETE_CLEANUP_IN_PROGRESS
+[2025-06-15 15:42:37,584] INFO: gwlbGroupStack Status: UPDATE_COMPLETE_CLEANUP_IN_PROGRESS
+[2025-06-15 15:42:48,095] INFO: gwlbGroupStack Status: UPDATE_COMPLETE
+[2025-06-15 15:42:48,095] INFO: [COMPLETE] Stack gwlbGroupStack => UPDATE_COMPLETE
+[2025-06-15 15:42:48,096] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-parameters.json
+[2025-06-15 15:42:48,096] INFO: [START] Deploying stack: ec2GroupStack
+[2025-06-15 15:42:48,345] INFO: No updates needed for ec2GroupStack
+[2025-06-15 15:42:48,346] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlbe-parameters.json
+[2025-06-15 15:42:48,346] INFO: [START] Deploying stack: gwblbeGroupStack
+[2025-06-15 15:42:48,524] ERROR: Failed to update_stack stack gwblbeGroupStack: An error occurred (ValidationError) when calling the UpdateStack operation: Stack:arn:aws:cloudformation:ap-southeast-1:975050199901:stack/gwblbeGroupStack/f421dcd0-49ba-11f0-ae40-0a83daa479b3 is in DELETE_IN_PROGRESS state and can not be updated.
+[2025-06-15 15:42:48,525] ERROR: [FAILED] Deployment pipeline stopped: An error occurred (ValidationError) when calling the UpdateStack operation: Stack:arn:aws:cloudformation:ap-southeast-1:975050199901:stack/gwblbeGroupStack/f421dcd0-49ba-11f0-ae40-0a83daa479b3 is in DELETE_IN_PROGRESS state and can not be updated.
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 171, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters=parameters
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 116, in deploy_stack
+    cf.update_stack(
+    ~~~~~~~~~~~~~~~^
+        StackName=stack_name,
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        Capabilities=['CAPABILITY_NAMED_IAM']
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 595, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 1058, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationError) when calling the UpdateStack operation: Stack:arn:aws:cloudformation:ap-southeast-1:975050199901:stack/gwblbeGroupStack/f421dcd0-49ba-11f0-ae40-0a83daa479b3 is in DELETE_IN_PROGRESS state and can not be updated.
+[2025-06-15 15:44:14,672] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 15:44:14,836] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 15:44:14,837] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 15:44:15,569] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 15:44:15,570] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 15:44:15,570] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 15:44:15,776] INFO: No updates needed for securityGroupStack
+[2025-06-15 15:44:15,777] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 15:44:15,777] INFO: [START] Deploying stack: gwlbGroupStack
+[2025-06-15 15:44:16,023] INFO: No updates needed for gwlbGroupStack
+[2025-06-15 15:44:16,023] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-parameters.json
+[2025-06-15 15:44:16,023] INFO: [START] Deploying stack: ec2GroupStack
+[2025-06-15 15:44:16,277] INFO: No updates needed for ec2GroupStack
+[2025-06-15 15:44:16,277] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlbe-parameters.json
+[2025-06-15 15:44:16,278] INFO: [START] Deploying stack: gwlbe1GroupStack
+[2025-06-15 15:44:16,440] ERROR: Failed to create_stack stack gwlbe1GroupStack: An error occurred (ValidationError) when calling the CreateStack operation: Parameters: [GWLBArn] do not exist in the template
+[2025-06-15 15:44:16,441] ERROR: [FAILED] Deployment pipeline stopped: An error occurred (ValidationError) when calling the CreateStack operation: Parameters: [GWLBArn] do not exist in the template
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 171, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters=parameters
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 107, in deploy_stack
+    cf.create_stack(
+    ~~~~~~~~~~~~~~~^
+        StackName=stack_name,
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        EnableTerminationProtection=False
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 595, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 1058, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationError) when calling the CreateStack operation: Parameters: [GWLBArn] do not exist in the template
+[2025-06-15 15:45:14,878] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 15:45:15,034] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 15:45:15,034] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 15:45:15,800] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 15:45:15,801] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 15:45:15,801] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 15:45:16,006] INFO: No updates needed for securityGroupStack
+[2025-06-15 15:45:16,007] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 15:45:16,007] INFO: [START] Deploying stack: gwlbGroupStack
+[2025-06-15 15:45:16,245] INFO: No updates needed for gwlbGroupStack
+[2025-06-15 15:45:16,246] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-parameters.json
+[2025-06-15 15:45:16,246] INFO: [START] Deploying stack: ec2GroupStack
+[2025-06-15 15:45:16,481] INFO: No updates needed for ec2GroupStack
+[2025-06-15 15:45:16,482] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlbe-parameters.json
+[2025-06-15 15:45:16,482] INFO: [START] Deploying stack: gwlbe1GroupStack
+[2025-06-15 15:45:16,801] INFO: Create Stack initiated for gwlbe1GroupStack
+[2025-06-15 15:45:16,802] INFO: Waiting for stack 'gwlbe1GroupStack' to reach 'CREATE_COMPLETE'...
+[2025-06-15 15:45:27,327] INFO: gwlbe1GroupStack Status: CREATE_FAILED
+[2025-06-15 15:45:27,328] ERROR: [FAILED] Deployment pipeline stopped: Stack gwlbe1GroupStack failed with status: CREATE_FAILED
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 171, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters=parameters
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 130, in deploy_stack
+    wait_for_stack_completion(stack_name, operation)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 152, in wait_for_stack_completion
+    raise Exception(f"Stack {stack_name} failed with status: {status}")
+Exception: Stack gwlbe1GroupStack failed with status: CREATE_FAILED
+[2025-06-15 15:46:22,918] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 15:46:23,097] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 15:46:23,097] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 15:46:23,841] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 15:46:23,842] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 15:46:23,842] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 15:46:24,056] INFO: No updates needed for securityGroupStack
+[2025-06-15 15:46:24,057] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 15:46:24,057] INFO: [START] Deploying stack: gwlbGroupStack
+[2025-06-15 15:46:24,363] INFO: Update Stack initiated for gwlbGroupStack
+[2025-06-15 15:46:24,363] INFO: Waiting for stack 'gwlbGroupStack' to reach 'UPDATE_COMPLETE'...
+[2025-06-15 15:46:34,894] INFO: gwlbGroupStack Status: UPDATE_ROLLBACK_IN_PROGRESS
+[2025-06-15 15:46:34,895] ERROR: [FAILED] Deployment pipeline stopped: Stack gwlbGroupStack failed with status: UPDATE_ROLLBACK_IN_PROGRESS
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 171, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters=parameters
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 130, in deploy_stack
+    wait_for_stack_completion(stack_name, operation)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 152, in wait_for_stack_completion
+    raise Exception(f"Stack {stack_name} failed with status: {status}")
+Exception: Stack gwlbGroupStack failed with status: UPDATE_ROLLBACK_IN_PROGRESS
+[2025-06-15 15:48:08,028] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 15:48:08,189] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 15:48:08,189] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 15:48:08,899] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 15:48:08,900] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 15:48:08,900] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 15:48:09,117] INFO: No updates needed for securityGroupStack
+[2025-06-15 15:48:09,117] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 15:48:09,118] INFO: [START] Deploying stack: gwlbGroupStack
+[2025-06-15 15:48:09,432] INFO: Update Stack initiated for gwlbGroupStack
+[2025-06-15 15:48:09,433] INFO: Waiting for stack 'gwlbGroupStack' to reach 'UPDATE_COMPLETE'...
+[2025-06-15 15:48:19,957] INFO: gwlbGroupStack Status: UPDATE_ROLLBACK_COMPLETE
+[2025-06-15 15:48:19,957] ERROR: [FAILED] Deployment pipeline stopped: Stack gwlbGroupStack failed with status: UPDATE_ROLLBACK_COMPLETE
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 171, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters=parameters
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 130, in deploy_stack
+    wait_for_stack_completion(stack_name, operation)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 152, in wait_for_stack_completion
+    raise Exception(f"Stack {stack_name} failed with status: {status}")
+Exception: Stack gwlbGroupStack failed with status: UPDATE_ROLLBACK_COMPLETE
+[2025-06-15 15:48:53,896] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 15:48:54,052] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 15:48:54,053] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 15:48:54,796] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 15:48:54,797] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 15:48:54,797] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 15:48:55,015] INFO: No updates needed for securityGroupStack
+[2025-06-15 15:48:55,016] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 15:48:55,016] INFO: [START] Deploying stack: gwlbGroupStack
+[2025-06-15 15:48:55,298] INFO: Update Stack initiated for gwlbGroupStack
+[2025-06-15 15:48:55,299] INFO: Waiting for stack 'gwlbGroupStack' to reach 'UPDATE_COMPLETE'...
+[2025-06-15 15:49:05,794] INFO: gwlbGroupStack Status: UPDATE_COMPLETE
+[2025-06-15 15:49:05,794] INFO: [COMPLETE] Stack gwlbGroupStack => UPDATE_COMPLETE
+[2025-06-15 15:49:05,795] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-parameters.json
+[2025-06-15 15:49:05,795] INFO: [START] Deploying stack: ec2GroupStack
+[2025-06-15 15:49:06,014] INFO: No updates needed for ec2GroupStack
+[2025-06-15 15:49:06,015] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlbe-parameters.json
+[2025-06-15 15:49:06,015] INFO: [START] Deploying stack: gwlbe1GroupStack
+[2025-06-15 15:49:06,187] ERROR: Failed to update_stack stack gwlbe1GroupStack: An error occurred (ValidationError) when calling the UpdateStack operation: This stack cannot be updated from [CREATE_FAILED] state because it contains [on-failure: DO_NOTHING]. Please use disable-rollback option instead during stack creation.
+[2025-06-15 15:49:06,187] ERROR: [FAILED] Deployment pipeline stopped: An error occurred (ValidationError) when calling the UpdateStack operation: This stack cannot be updated from [CREATE_FAILED] state because it contains [on-failure: DO_NOTHING]. Please use disable-rollback option instead during stack creation.
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 171, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters=parameters
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 116, in deploy_stack
+    cf.update_stack(
+    ~~~~~~~~~~~~~~~^
+        StackName=stack_name,
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        Capabilities=['CAPABILITY_NAMED_IAM']
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 595, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 1058, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationError) when calling the UpdateStack operation: This stack cannot be updated from [CREATE_FAILED] state because it contains [on-failure: DO_NOTHING]. Please use disable-rollback option instead during stack creation.
+[2025-06-15 15:50:11,799] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 15:50:11,953] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 15:50:11,954] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 15:50:12,670] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 15:50:12,671] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 15:50:12,671] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 15:50:12,895] INFO: No updates needed for securityGroupStack
+[2025-06-15 15:50:12,895] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 15:50:12,896] INFO: [START] Deploying stack: gwlbGroupStack
+[2025-06-15 15:50:13,133] INFO: No updates needed for gwlbGroupStack
+[2025-06-15 15:50:13,133] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-parameters.json
+[2025-06-15 15:50:13,133] INFO: [START] Deploying stack: ec2GroupStack
+[2025-06-15 15:50:13,353] INFO: No updates needed for ec2GroupStack
+[2025-06-15 15:50:13,354] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlbe-parameters.json
+[2025-06-15 15:50:13,354] INFO: [START] Deploying stack: gwlbe2GroupStack
+[2025-06-15 15:50:13,702] INFO: Create Stack initiated for gwlbe2GroupStack
+[2025-06-15 15:50:13,702] INFO: Waiting for stack 'gwlbe2GroupStack' to reach 'CREATE_COMPLETE'...
+[2025-06-15 15:50:24,221] INFO: gwlbe2GroupStack Status: CREATE_FAILED
+[2025-06-15 15:50:24,221] ERROR: [FAILED] Deployment pipeline stopped: Stack gwlbe2GroupStack failed with status: CREATE_FAILED
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 171, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters=parameters
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 130, in deploy_stack
+    wait_for_stack_completion(stack_name, operation)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 152, in wait_for_stack_completion
+    raise Exception(f"Stack {stack_name} failed with status: {status}")
+Exception: Stack gwlbe2GroupStack failed with status: CREATE_FAILED
+[2025-06-15 15:51:14,236] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 15:51:14,389] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 15:51:14,390] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 15:51:15,169] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 15:51:15,170] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 15:51:15,170] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 15:51:15,390] INFO: No updates needed for securityGroupStack
+[2025-06-15 15:51:15,391] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 15:51:15,391] INFO: [START] Deploying stack: gwlbGroupStack
+[2025-06-15 15:51:15,590] INFO: No updates needed for gwlbGroupStack
+[2025-06-15 15:51:15,591] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-parameters.json
+[2025-06-15 15:51:15,591] INFO: [START] Deploying stack: ec2GroupStack
+[2025-06-15 15:51:15,838] INFO: No updates needed for ec2GroupStack
+[2025-06-15 15:51:15,839] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlbe-parameters.json
+[2025-06-15 15:51:15,839] INFO: [START] Deploying stack: gwlbe2GroupStack
+[2025-06-15 15:51:16,023] ERROR: Failed to update_stack stack gwlbe2GroupStack: An error occurred (ValidationError) when calling the UpdateStack operation: This stack cannot be updated from [CREATE_FAILED] state because it contains [on-failure: DO_NOTHING]. Please use disable-rollback option instead during stack creation.
+[2025-06-15 15:51:16,023] ERROR: [FAILED] Deployment pipeline stopped: An error occurred (ValidationError) when calling the UpdateStack operation: This stack cannot be updated from [CREATE_FAILED] state because it contains [on-failure: DO_NOTHING]. Please use disable-rollback option instead during stack creation.
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 171, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters=parameters
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 116, in deploy_stack
+    cf.update_stack(
+    ~~~~~~~~~~~~~~~^
+        StackName=stack_name,
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        Capabilities=['CAPABILITY_NAMED_IAM']
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 595, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 1058, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationError) when calling the UpdateStack operation: This stack cannot be updated from [CREATE_FAILED] state because it contains [on-failure: DO_NOTHING]. Please use disable-rollback option instead during stack creation.
+[2025-06-15 15:52:28,604] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 15:52:28,760] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 15:52:28,761] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 15:52:29,533] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 15:52:29,534] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 15:52:29,534] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 15:52:29,777] INFO: No updates needed for securityGroupStack
+[2025-06-15 15:52:29,777] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 15:52:29,777] INFO: [START] Deploying stack: gwlbGroupStack
+[2025-06-15 15:52:29,995] INFO: No updates needed for gwlbGroupStack
+[2025-06-15 15:52:29,996] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-parameters.json
+[2025-06-15 15:52:29,996] INFO: [START] Deploying stack: ec2GroupStack
+[2025-06-15 15:52:30,244] INFO: No updates needed for ec2GroupStack
+[2025-06-15 15:52:30,245] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlbe-parameters.json
+[2025-06-15 15:52:30,245] INFO: [START] Deploying stack: gwlbe3GroupStack
+[2025-06-15 15:52:30,590] INFO: Create Stack initiated for gwlbe3GroupStack
+[2025-06-15 15:52:30,591] INFO: Waiting for stack 'gwlbe3GroupStack' to reach 'CREATE_COMPLETE'...
+[2025-06-15 15:52:41,092] INFO: gwlbe3GroupStack Status: CREATE_FAILED
+[2025-06-15 15:52:41,093] ERROR: [FAILED] Deployment pipeline stopped: Stack gwlbe3GroupStack failed with status: CREATE_FAILED
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 171, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters=parameters
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 130, in deploy_stack
+    wait_for_stack_completion(stack_name, operation)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 152, in wait_for_stack_completion
+    raise Exception(f"Stack {stack_name} failed with status: {status}")
+Exception: Stack gwlbe3GroupStack failed with status: CREATE_FAILED
+[2025-06-15 15:55:31,596] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 15:55:31,760] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 15:55:31,761] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 15:55:32,511] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 15:55:32,511] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 15:55:32,512] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 15:55:32,743] INFO: No updates needed for securityGroupStack
+[2025-06-15 15:55:32,744] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 15:55:32,744] INFO: [START] Deploying stack: gwlbGroupStack
+[2025-06-15 15:55:32,984] INFO: No updates needed for gwlbGroupStack
+[2025-06-15 15:55:32,985] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-parameters.json
+[2025-06-15 15:55:32,985] INFO: [START] Deploying stack: ec2GroupStack
+[2025-06-15 15:55:33,225] INFO: No updates needed for ec2GroupStack
+[2025-06-15 15:55:33,225] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlbe-parameters.json
+[2025-06-15 15:55:33,225] INFO: [START] Deploying stack: gwlbe3GroupStack
+[2025-06-15 15:55:33,404] ERROR: Failed to update_stack stack gwlbe3GroupStack: An error occurred (ValidationError) when calling the UpdateStack operation: This stack cannot be updated from [CREATE_FAILED] state because it contains [on-failure: DO_NOTHING]. Please use disable-rollback option instead during stack creation.
+[2025-06-15 15:55:33,405] ERROR: [FAILED] Deployment pipeline stopped: An error occurred (ValidationError) when calling the UpdateStack operation: This stack cannot be updated from [CREATE_FAILED] state because it contains [on-failure: DO_NOTHING]. Please use disable-rollback option instead during stack creation.
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 171, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters=parameters
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 116, in deploy_stack
+    cf.update_stack(
+    ~~~~~~~~~~~~~~~^
+        StackName=stack_name,
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        Capabilities=['CAPABILITY_NAMED_IAM']
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 595, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 1058, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationError) when calling the UpdateStack operation: This stack cannot be updated from [CREATE_FAILED] state because it contains [on-failure: DO_NOTHING]. Please use disable-rollback option instead during stack creation.
+[2025-06-15 15:55:50,634] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 15:55:50,795] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 15:55:50,796] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 15:55:51,577] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 15:55:51,577] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 15:55:51,577] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 15:55:51,775] INFO: No updates needed for securityGroupStack
+[2025-06-15 15:55:51,776] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 15:55:51,776] INFO: [START] Deploying stack: gwlbGroupStack
+[2025-06-15 15:55:52,003] INFO: No updates needed for gwlbGroupStack
+[2025-06-15 15:55:52,004] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-parameters.json
+[2025-06-15 15:55:52,004] INFO: [START] Deploying stack: ec2GroupStack
+[2025-06-15 15:55:52,235] INFO: No updates needed for ec2GroupStack
+[2025-06-15 15:55:52,235] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlbe-parameters.json
+[2025-06-15 15:55:52,236] INFO: [START] Deploying stack: gwlbe4GroupStack
+[2025-06-15 15:55:52,431] ERROR: Failed to create_stack stack gwlbe4GroupStack: An error occurred (ValidationError) when calling the CreateStack operation: Template format error: Every Default member must be a string.
+[2025-06-15 15:55:52,432] ERROR: [FAILED] Deployment pipeline stopped: An error occurred (ValidationError) when calling the CreateStack operation: Template format error: Every Default member must be a string.
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 171, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters=parameters
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 107, in deploy_stack
+    cf.create_stack(
+    ~~~~~~~~~~~~~~~^
+        StackName=stack_name,
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        EnableTerminationProtection=False
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 595, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 1058, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationError) when calling the CreateStack operation: Template format error: Every Default member must be a string.
+[2025-06-15 15:56:42,293] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 15:56:42,452] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 15:56:42,453] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 15:56:43,208] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 15:56:43,208] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 15:56:43,209] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 15:56:43,416] INFO: No updates needed for securityGroupStack
+[2025-06-15 15:56:43,417] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 15:56:43,417] INFO: [START] Deploying stack: gwlbGroupStack
+[2025-06-15 15:56:43,650] INFO: No updates needed for gwlbGroupStack
+[2025-06-15 15:56:43,651] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-parameters.json
+[2025-06-15 15:56:43,651] INFO: [START] Deploying stack: ec2GroupStack
+[2025-06-15 15:56:43,890] INFO: No updates needed for ec2GroupStack
+[2025-06-15 15:56:43,890] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlbe-parameters.json
+[2025-06-15 15:56:43,891] INFO: [START] Deploying stack: gwlbe4GroupStack
+[2025-06-15 15:56:44,090] ERROR: Failed to create_stack stack gwlbe4GroupStack: An error occurred (ValidationError) when calling the CreateStack operation: Template format error: Unresolved resource dependencies [GWLBServiceName] in the Resources block of the template
+[2025-06-15 15:56:44,090] ERROR: [FAILED] Deployment pipeline stopped: An error occurred (ValidationError) when calling the CreateStack operation: Template format error: Unresolved resource dependencies [GWLBServiceName] in the Resources block of the template
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 171, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters=parameters
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 107, in deploy_stack
+    cf.create_stack(
+    ~~~~~~~~~~~~~~~^
+        StackName=stack_name,
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        EnableTerminationProtection=False
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 595, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 1058, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationError) when calling the CreateStack operation: Template format error: Unresolved resource dependencies [GWLBServiceName] in the Resources block of the template
+[2025-06-15 15:57:16,703] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 15:57:16,869] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 15:57:16,869] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 15:57:17,589] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 15:57:17,590] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 15:57:17,590] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 15:57:17,788] INFO: No updates needed for securityGroupStack
+[2025-06-15 15:57:17,789] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 15:57:17,789] INFO: [START] Deploying stack: gwlbGroupStack
+[2025-06-15 15:57:18,015] INFO: No updates needed for gwlbGroupStack
+[2025-06-15 15:57:18,016] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-parameters.json
+[2025-06-15 15:57:18,016] INFO: [START] Deploying stack: ec2GroupStack
+[2025-06-15 15:57:18,249] INFO: No updates needed for ec2GroupStack
+[2025-06-15 15:57:18,249] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlbe-parameters.json
+[2025-06-15 15:57:18,250] INFO: [START] Deploying stack: gwlbe4GroupStack
+[2025-06-15 15:57:18,426] ERROR: Failed to create_stack stack gwlbe4GroupStack: An error occurred (ValidationError) when calling the CreateStack operation: Template format error: YAML not well-formed. (line 68, column 1)
+[2025-06-15 15:57:18,427] ERROR: [FAILED] Deployment pipeline stopped: An error occurred (ValidationError) when calling the CreateStack operation: Template format error: YAML not well-formed. (line 68, column 1)
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 171, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters=parameters
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 107, in deploy_stack
+    cf.create_stack(
+    ~~~~~~~~~~~~~~~^
+        StackName=stack_name,
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        EnableTerminationProtection=False
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 595, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 1058, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationError) when calling the CreateStack operation: Template format error: YAML not well-formed. (line 68, column 1)
+[2025-06-15 15:57:49,219] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 15:57:49,380] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 15:57:49,381] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 15:57:50,173] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 15:57:50,174] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 15:57:50,174] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 15:57:50,382] INFO: No updates needed for securityGroupStack
+[2025-06-15 15:57:50,383] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 15:57:50,383] INFO: [START] Deploying stack: gwlbGroupStack
+[2025-06-15 15:57:50,622] INFO: No updates needed for gwlbGroupStack
+[2025-06-15 15:57:50,623] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-parameters.json
+[2025-06-15 15:57:50,623] INFO: [START] Deploying stack: ec2GroupStack
+[2025-06-15 15:57:50,845] INFO: No updates needed for ec2GroupStack
+[2025-06-15 15:57:50,846] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlbe-parameters.json
+[2025-06-15 15:57:50,846] INFO: [START] Deploying stack: gwlbe4GroupStack
+[2025-06-15 15:57:51,009] ERROR: Failed to create_stack stack gwlbe4GroupStack: An error occurred (ValidationError) when calling the CreateStack operation: Template format error: YAML not well-formed. (line 21, column 33)
+[2025-06-15 15:57:51,009] ERROR: [FAILED] Deployment pipeline stopped: An error occurred (ValidationError) when calling the CreateStack operation: Template format error: YAML not well-formed. (line 21, column 33)
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 171, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters=parameters
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 107, in deploy_stack
+    cf.create_stack(
+    ~~~~~~~~~~~~~~~^
+        StackName=stack_name,
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        EnableTerminationProtection=False
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 595, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\botocore\client.py", line 1058, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (ValidationError) when calling the CreateStack operation: Template format error: YAML not well-formed. (line 21, column 33)
+[2025-06-15 15:58:18,275] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 15:58:18,437] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 15:58:18,438] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 15:58:19,220] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 15:58:19,220] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 15:58:19,221] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 15:58:19,444] INFO: No updates needed for securityGroupStack
+[2025-06-15 15:58:19,445] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 15:58:19,445] INFO: [START] Deploying stack: gwlbGroupStack
+[2025-06-15 15:58:19,652] INFO: No updates needed for gwlbGroupStack
+[2025-06-15 15:58:19,653] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-parameters.json
+[2025-06-15 15:58:19,653] INFO: [START] Deploying stack: ec2GroupStack
+[2025-06-15 15:58:19,884] INFO: No updates needed for ec2GroupStack
+[2025-06-15 15:58:19,884] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlbe-parameters.json
+[2025-06-15 15:58:19,885] INFO: [START] Deploying stack: gwlbe4GroupStack
+[2025-06-15 15:58:20,198] INFO: Create Stack initiated for gwlbe4GroupStack
+[2025-06-15 15:58:20,198] INFO: Waiting for stack 'gwlbe4GroupStack' to reach 'CREATE_COMPLETE'...
+[2025-06-15 15:58:30,705] INFO: gwlbe4GroupStack Status: CREATE_FAILED
+[2025-06-15 15:58:30,705] ERROR: [FAILED] Deployment pipeline stopped: Stack gwlbe4GroupStack failed with status: CREATE_FAILED
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 171, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters=parameters
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 130, in deploy_stack
+    wait_for_stack_completion(stack_name, operation)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 152, in wait_for_stack_completion
+    raise Exception(f"Stack {stack_name} failed with status: {status}")
+Exception: Stack gwlbe4GroupStack failed with status: CREATE_FAILED
+[2025-06-15 16:00:23,492] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 16:00:23,653] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 16:00:23,653] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 16:00:24,370] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 16:00:24,371] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 16:00:24,371] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 16:00:24,558] INFO: No updates needed for securityGroupStack
+[2025-06-15 16:00:24,559] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 16:00:24,559] INFO: [START] Deploying stack: gwlbGroupStack
+[2025-06-15 16:00:24,922] INFO: Update Stack initiated for gwlbGroupStack
+[2025-06-15 16:00:24,923] INFO: Waiting for stack 'gwlbGroupStack' to reach 'UPDATE_COMPLETE'...
+[2025-06-15 16:00:35,453] INFO: gwlbGroupStack Status: UPDATE_ROLLBACK_COMPLETE
+[2025-06-15 16:00:35,454] ERROR: [FAILED] Deployment pipeline stopped: Stack gwlbGroupStack failed with status: UPDATE_ROLLBACK_COMPLETE
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 171, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters=parameters
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 130, in deploy_stack
+    wait_for_stack_completion(stack_name, operation)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 152, in wait_for_stack_completion
+    raise Exception(f"Stack {stack_name} failed with status: {status}")
+Exception: Stack gwlbGroupStack failed with status: UPDATE_ROLLBACK_COMPLETE
+[2025-06-15 16:04:42,346] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 16:04:42,503] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 16:04:42,504] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 16:04:43,207] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 16:04:43,208] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 16:04:43,208] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 16:04:43,399] INFO: No updates needed for securityGroupStack
+[2025-06-15 16:04:43,400] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 16:04:43,400] INFO: [START] Deploying stack: gwlbGroupStack
+[2025-06-15 16:04:43,725] INFO: Update Stack initiated for gwlbGroupStack
+[2025-06-15 16:04:43,725] INFO: Waiting for stack 'gwlbGroupStack' to reach 'UPDATE_COMPLETE'...
+[2025-06-15 16:04:54,274] INFO: gwlbGroupStack Status: UPDATE_ROLLBACK_COMPLETE
+[2025-06-15 16:04:54,274] ERROR: [FAILED] Deployment pipeline stopped: Stack gwlbGroupStack failed with status: UPDATE_ROLLBACK_COMPLETE
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 171, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters=parameters
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 130, in deploy_stack
+    wait_for_stack_completion(stack_name, operation)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 152, in wait_for_stack_completion
+    raise Exception(f"Stack {stack_name} failed with status: {status}")
+Exception: Stack gwlbGroupStack failed with status: UPDATE_ROLLBACK_COMPLETE
+[2025-06-15 16:08:41,599] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 16:08:41,763] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 16:08:41,763] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 16:08:42,503] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 16:08:42,503] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 16:08:42,504] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 16:08:42,741] INFO: No updates needed for securityGroupStack
+[2025-06-15 16:08:42,742] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 16:08:42,742] INFO: [START] Deploying stack: gwlbGroupStack
+[2025-06-15 16:08:43,091] INFO: Update Stack initiated for gwlbGroupStack
+[2025-06-15 16:08:43,091] INFO: Waiting for stack 'gwlbGroupStack' to reach 'UPDATE_COMPLETE'...
+[2025-06-15 16:08:53,652] INFO: gwlbGroupStack Status: UPDATE_COMPLETE
+[2025-06-15 16:08:53,652] INFO: [COMPLETE] Stack gwlbGroupStack => UPDATE_COMPLETE
+[2025-06-15 16:08:53,653] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-parameters.json
+[2025-06-15 16:08:53,654] INFO: [START] Deploying stack: ec2GroupStack
+[2025-06-15 16:08:53,881] INFO: No updates needed for ec2GroupStack
+[2025-06-15 16:08:53,881] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlbe-parameters.json
+[2025-06-15 16:08:53,882] INFO: [START] Deploying stack: gwlbeGroupStack
+[2025-06-15 16:08:54,247] INFO: Create Stack initiated for gwlbeGroupStack
+[2025-06-15 16:08:54,247] INFO: Waiting for stack 'gwlbeGroupStack' to reach 'CREATE_COMPLETE'...
+[2025-06-15 16:09:04,784] INFO: gwlbeGroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 16:09:15,300] INFO: gwlbeGroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 16:09:25,819] INFO: gwlbeGroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 16:09:36,372] INFO: gwlbeGroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 16:09:46,866] INFO: gwlbeGroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 16:09:57,379] INFO: gwlbeGroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 16:10:07,886] INFO: gwlbeGroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 16:10:18,369] INFO: gwlbeGroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 16:10:28,929] INFO: gwlbeGroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 16:10:39,438] INFO: gwlbeGroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 16:10:49,946] INFO: gwlbeGroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 16:11:00,490] INFO: gwlbeGroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 16:11:11,015] INFO: gwlbeGroupStack Status: CREATE_IN_PROGRESS
+[2025-06-15 16:11:21,538] INFO: gwlbeGroupStack Status: CREATE_COMPLETE
+[2025-06-15 16:11:21,539] INFO: [COMPLETE] Stack gwlbeGroupStack => CREATE_COMPLETE
+[2025-06-15 16:42:59,631] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 16:42:59,826] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 16:42:59,827] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 16:43:00,598] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 16:43:00,598] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 16:43:00,599] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 16:43:00,804] INFO: No updates needed for securityGroupStack
+[2025-06-15 16:43:00,805] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 16:43:00,805] INFO: [START] Deploying stack: gwlbGroupStack
+[2025-06-15 16:43:01,102] INFO: Update Stack initiated for gwlbGroupStack
+[2025-06-15 16:43:01,103] INFO: Waiting for stack 'gwlbGroupStack' to reach 'UPDATE_COMPLETE'...
+[2025-06-15 16:43:11,614] INFO: gwlbGroupStack Status: UPDATE_ROLLBACK_COMPLETE
+[2025-06-15 16:43:11,614] ERROR: [FAILED] Deployment pipeline stopped: Stack gwlbGroupStack failed with status: UPDATE_ROLLBACK_COMPLETE
+Traceback (most recent call last):
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 171, in <module>
+    deploy_stack(
+    ~~~~~~~~~~~~^
+        stack_name=stack["name"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        template_path=stack["template"],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        parameters=parameters
+        ^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 130, in deploy_stack
+    wait_for_stack_completion(stack_name, operation)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\deployment.py", line 152, in wait_for_stack_completion
+    raise Exception(f"Stack {stack_name} failed with status: {status}")
+Exception: Stack gwlbGroupStack failed with status: UPDATE_ROLLBACK_COMPLETE
+[2025-06-15 16:44:05,768] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 16:44:05,939] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 16:44:05,939] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 16:44:06,711] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 16:44:06,711] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 16:44:06,712] INFO: [START] Deploying stack: securityGroupStack
+[2025-06-15 16:44:06,925] INFO: No updates needed for securityGroupStack
+[2025-06-15 16:44:06,926] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 16:44:06,926] INFO: [START] Deploying stack: gwlbGroupStack
+[2025-06-15 16:44:07,233] INFO: Update Stack initiated for gwlbGroupStack
+[2025-06-15 16:44:07,234] INFO: Waiting for stack 'gwlbGroupStack' to reach 'UPDATE_COMPLETE'...
+[2025-06-15 16:44:17,758] INFO: gwlbGroupStack Status: UPDATE_COMPLETE
+[2025-06-15 16:44:17,758] INFO: [COMPLETE] Stack gwlbGroupStack => UPDATE_COMPLETE
+[2025-06-15 16:44:17,759] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-parameters.json
+[2025-06-15 16:44:17,759] INFO: [START] Deploying stack: ec2GroupStack
+[2025-06-15 16:44:17,999] INFO: No updates needed for ec2GroupStack
+[2025-06-15 16:44:18,000] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlbe-parameters.json
+[2025-06-15 16:44:18,000] INFO: [START] Deploying stack: gwlbeGroupStack
+[2025-06-15 16:44:18,203] INFO: No updates needed for gwlbeGroupStack
+[2025-06-15 18:43:17,648] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 18:43:17,831] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 18:43:17,831] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 18:43:18,678] INFO: Create Stack initiated for perimeterVPCstack
+[2025-06-15 18:43:18,679] INFO: Waiting for stack 'perimeterVPCstack' to reach 'CREATE_COMPLETE'...
+[2025-06-15 18:43:29,184] INFO: perimeterVPCstack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:43:39,699] INFO: perimeterVPCstack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:43:50,220] INFO: perimeterVPCstack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:44:00,770] INFO: perimeterVPCstack Status: CREATE_COMPLETE
+[2025-06-15 18:44:00,771] INFO: [COMPLETE] Stack perimeterVPCstack => CREATE_COMPLETE
+[2025-06-15 18:46:47,632] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 18:46:47,801] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 18:46:47,802] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 18:46:48,621] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 18:46:48,621] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 18:46:48,622] INFO: [START] Deploying stack: perimeterSGStack
+[2025-06-15 18:46:49,028] INFO: Create Stack initiated for perimeterSGStack
+[2025-06-15 18:46:49,029] INFO: Waiting for stack 'perimeterSGStack' to reach 'CREATE_COMPLETE'...
+[2025-06-15 18:46:59,621] INFO: perimeterSGStack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:47:10,151] INFO: perimeterSGStack Status: CREATE_COMPLETE
+[2025-06-15 18:47:10,152] INFO: [COMPLETE] Stack perimeterSGStack => CREATE_COMPLETE
+[2025-06-15 18:49:25,963] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 18:49:26,129] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 18:49:26,130] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 18:49:26,900] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 18:49:26,900] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 18:49:26,901] INFO: [START] Deploying stack: perimeterSGStack
+[2025-06-15 18:49:27,106] INFO: No updates needed for perimeterSGStack
+[2025-06-15 18:49:27,107] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 18:49:27,107] INFO: [START] Deploying stack: perimeterGWLBStack
+[2025-06-15 18:49:27,424] INFO: Create Stack initiated for perimeterGWLBStack
+[2025-06-15 18:49:27,424] INFO: Waiting for stack 'perimeterGWLBStack' to reach 'CREATE_COMPLETE'...
+[2025-06-15 18:49:37,941] INFO: perimeterGWLBStack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:49:48,456] INFO: perimeterGWLBStack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:49:58,960] INFO: perimeterGWLBStack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:50:09,445] INFO: perimeterGWLBStack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:50:19,940] INFO: perimeterGWLBStack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:50:30,499] INFO: perimeterGWLBStack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:50:41,030] INFO: perimeterGWLBStack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:50:51,571] INFO: perimeterGWLBStack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:51:02,089] INFO: perimeterGWLBStack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:51:12,609] INFO: perimeterGWLBStack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:51:23,135] INFO: perimeterGWLBStack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:51:33,655] INFO: perimeterGWLBStack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:51:44,184] INFO: perimeterGWLBStack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:51:54,737] INFO: perimeterGWLBStack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:52:05,265] INFO: perimeterGWLBStack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:52:15,776] INFO: perimeterGWLBStack Status: CREATE_COMPLETE
+[2025-06-15 18:52:15,776] INFO: [COMPLETE] Stack perimeterGWLBStack => CREATE_COMPLETE
+[2025-06-15 18:54:26,959] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 18:54:27,127] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 18:54:27,128] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 18:54:27,956] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 18:54:27,957] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 18:54:27,957] INFO: [START] Deploying stack: perimeterSGStack
+[2025-06-15 18:54:28,175] INFO: No updates needed for perimeterSGStack
+[2025-06-15 18:54:28,175] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 18:54:28,175] INFO: [START] Deploying stack: perimeterGWLBStack
+[2025-06-15 18:54:28,393] INFO: No updates needed for perimeterGWLBStack
+[2025-06-15 18:54:28,394] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-parameters.json
+[2025-06-15 18:54:28,394] INFO: [START] Deploying stack: perimeterec2Stack
+[2025-06-15 18:54:28,727] INFO: Create Stack initiated for perimeterec2Stack
+[2025-06-15 18:54:28,727] INFO: Waiting for stack 'perimeterec2Stack' to reach 'CREATE_COMPLETE'...
+[2025-06-15 18:54:39,262] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:54:49,805] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:55:00,328] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:55:10,850] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:55:21,366] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:55:31,890] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:55:42,446] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:55:52,995] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:56:03,530] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:56:14,063] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:56:24,578] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:56:35,109] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:56:45,625] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:56:56,134] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:57:06,655] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:57:17,169] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:57:27,677] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:57:38,189] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:57:48,716] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:57:59,253] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:58:09,795] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:58:20,326] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:58:30,836] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:58:41,356] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:58:51,892] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:59:02,435] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:59:12,957] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:59:23,479] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:59:34,011] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:59:44,530] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 18:59:55,061] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 19:00:05,582] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 19:00:16,119] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 19:00:26,630] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 19:00:37,158] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 19:00:47,668] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 19:00:58,182] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 19:01:08,719] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 19:01:19,252] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 19:01:29,800] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 19:01:40,343] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 19:01:50,865] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 19:02:01,385] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 19:02:11,889] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 19:02:22,401] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 19:02:32,958] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 19:02:43,485] INFO: perimeterec2Stack Status: CREATE_IN_PROGRESS
+[2025-06-15 19:02:54,023] INFO: perimeterec2Stack Status: CREATE_COMPLETE
+[2025-06-15 19:02:54,023] INFO: [COMPLETE] Stack perimeterec2Stack => CREATE_COMPLETE
+[2025-06-15 19:03:32,820] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 19:03:32,989] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 19:03:32,990] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 19:03:33,763] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 19:03:33,764] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 19:03:33,764] INFO: [START] Deploying stack: perimeterSGStack
+[2025-06-15 19:03:34,074] INFO: No updates needed for perimeterSGStack
+[2025-06-15 19:03:34,074] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 19:03:34,074] INFO: [START] Deploying stack: perimeterGWLBStack
+[2025-06-15 19:03:34,320] INFO: No updates needed for perimeterGWLBStack
+[2025-06-15 19:03:34,321] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-parameters.json
+[2025-06-15 19:03:34,321] INFO: [START] Deploying stack: perimeterec2Stack
+[2025-06-15 19:03:34,559] INFO: No updates needed for perimeterec2Stack
+[2025-06-15 19:03:34,560] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlbe-parameters.json
+[2025-06-15 19:03:34,560] INFO: [START] Deploying stack: perimetergwlbeStack
+[2025-06-15 19:03:34,929] INFO: Create Stack initiated for perimetergwlbeStack
+[2025-06-15 19:03:34,930] INFO: Waiting for stack 'perimetergwlbeStack' to reach 'CREATE_COMPLETE'...
+[2025-06-15 19:03:45,464] INFO: perimetergwlbeStack Status: CREATE_IN_PROGRESS
+[2025-06-15 19:03:56,022] INFO: perimetergwlbeStack Status: CREATE_IN_PROGRESS
+[2025-06-15 19:04:06,537] INFO: perimetergwlbeStack Status: CREATE_IN_PROGRESS
+[2025-06-15 19:04:17,057] INFO: perimetergwlbeStack Status: CREATE_IN_PROGRESS
+[2025-06-15 19:04:27,579] INFO: perimetergwlbeStack Status: CREATE_IN_PROGRESS
+[2025-06-15 19:04:38,115] INFO: perimetergwlbeStack Status: CREATE_IN_PROGRESS
+[2025-06-15 19:04:48,661] INFO: perimetergwlbeStack Status: CREATE_IN_PROGRESS
+[2025-06-15 19:04:59,189] INFO: perimetergwlbeStack Status: CREATE_IN_PROGRESS
+[2025-06-15 19:05:09,736] INFO: perimetergwlbeStack Status: CREATE_COMPLETE
+[2025-06-15 19:05:09,736] INFO: [COMPLETE] Stack perimetergwlbeStack => CREATE_COMPLETE
+[2025-06-15 19:07:34,700] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 19:07:35,011] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 19:07:35,011] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 19:07:35,835] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 19:07:35,836] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 19:07:35,836] INFO: [START] Deploying stack: perimeterSGStack
+[2025-06-15 19:07:36,052] INFO: No updates needed for perimeterSGStack
+[2025-06-15 19:07:36,053] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 19:07:36,053] INFO: [START] Deploying stack: perimeterGWLBStack
+[2025-06-15 19:07:36,256] INFO: No updates needed for perimeterGWLBStack
+[2025-06-15 19:07:36,257] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-parameters.json
+[2025-06-15 19:07:36,257] INFO: [START] Deploying stack: perimeterec2Stack
+[2025-06-15 19:07:36,481] INFO: No updates needed for perimeterec2Stack
+[2025-06-15 19:07:36,481] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlbe-parameters.json
+[2025-06-15 19:07:36,482] INFO: [START] Deploying stack: perimetergwlbeStack
+[2025-06-15 19:07:36,720] INFO: No updates needed for perimetergwlbeStack
+[2025-06-15 19:07:36,720] INFO: Starting to share Gateway Load Balancer Endpoints with accounts: ['123456789012']
+[2025-06-15 19:07:37,230] INFO: No Gateway Load Balancer Endpoints found to share.
+[2025-06-15 19:12:46,276] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 19:12:46,457] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 19:12:46,457] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 19:12:47,251] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 19:12:47,251] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 19:12:47,251] INFO: [START] Deploying stack: perimeterSGStack
+[2025-06-15 19:12:47,472] INFO: No updates needed for perimeterSGStack
+[2025-06-15 19:12:47,472] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 19:12:47,472] INFO: [START] Deploying stack: perimeterGWLBStack
+[2025-06-15 19:12:47,730] INFO: No updates needed for perimeterGWLBStack
+[2025-06-15 19:12:47,731] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-parameters.json
+[2025-06-15 19:12:47,731] INFO: [START] Deploying stack: perimeterec2Stack
+[2025-06-15 19:12:47,999] INFO: No updates needed for perimeterec2Stack
+[2025-06-15 19:12:48,000] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlbe-parameters.json
+[2025-06-15 19:12:48,000] INFO: [START] Deploying stack: perimetergwlbeStack
+[2025-06-15 19:12:48,198] INFO: No updates needed for perimetergwlbeStack
+[2025-06-15 19:12:49,587] INFO: AWS Account ID: 975050199901
+[2025-06-15 19:12:49,588] INFO: AWS Caller ARN: arn:aws:iam::975050199901:user/sysadm
+[2025-06-15 19:12:49,588] INFO: AWS Region (boto3 session): ap-southeast-1
+[2025-06-15 19:12:50,314] INFO: Found 3 Gateway Load Balancer Endpoint(s) to share.
+[2025-06-15 19:12:50,317] ERROR: Failed to list Gateway Load Balancer Endpoints: 'VpcEndpointArn'
+[2025-06-15 19:13:35,780] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 19:13:35,939] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 19:13:35,939] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 19:13:36,703] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 19:13:36,704] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 19:13:36,704] INFO: [START] Deploying stack: perimeterSGStack
+[2025-06-15 19:13:36,918] INFO: No updates needed for perimeterSGStack
+[2025-06-15 19:13:36,919] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 19:13:36,919] INFO: [START] Deploying stack: perimeterGWLBStack
+[2025-06-15 19:13:37,150] INFO: No updates needed for perimeterGWLBStack
+[2025-06-15 19:13:37,151] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-parameters.json
+[2025-06-15 19:13:37,151] INFO: [START] Deploying stack: perimeterec2Stack
+[2025-06-15 19:13:37,360] INFO: No updates needed for perimeterec2Stack
+[2025-06-15 19:13:37,360] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlbe-parameters.json
+[2025-06-15 19:13:37,361] INFO: [START] Deploying stack: perimetergwlbeStack
+[2025-06-15 19:13:37,569] INFO: No updates needed for perimetergwlbeStack
+[2025-06-15 19:13:38,950] INFO: AWS Account ID: 975050199901
+[2025-06-15 19:13:38,950] INFO: AWS Caller ARN: arn:aws:iam::975050199901:user/sysadm
+[2025-06-15 19:13:38,950] INFO: AWS Region (boto3 session): ap-southeast-1
+[2025-06-15 19:13:39,632] INFO: Found 3 Gateway Load Balancer Endpoint(s) to share.
+[2025-06-15 19:13:39,633] ERROR: Failed to list Gateway Load Balancer Endpoints: 'VpcEndpointArn'
+[2025-06-15 19:13:49,343] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 19:13:49,508] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\parameters.json
+[2025-06-15 19:13:49,508] INFO: [START] Deploying stack: perimeterVPCstack
+[2025-06-15 19:13:50,286] INFO: No updates needed for perimeterVPCstack
+[2025-06-15 19:13:50,286] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-sg-parameters.json
+[2025-06-15 19:13:50,287] INFO: [START] Deploying stack: perimeterSGStack
+[2025-06-15 19:13:50,507] INFO: No updates needed for perimeterSGStack
+[2025-06-15 19:13:50,507] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlb-parameters.json
+[2025-06-15 19:13:50,508] INFO: [START] Deploying stack: perimeterGWLBStack
+[2025-06-15 19:13:50,725] INFO: No updates needed for perimeterGWLBStack
+[2025-06-15 19:13:50,726] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\ngfw-parameters.json
+[2025-06-15 19:13:50,726] INFO: [START] Deploying stack: perimeterec2Stack
+[2025-06-15 19:13:50,948] INFO: No updates needed for perimeterec2Stack
+[2025-06-15 19:13:50,949] INFO: Loaded parameters from D:\Avaloq Project\avaloq-cust-network-security\customer-perimeter-security\parameters\gwlbe-parameters.json
+[2025-06-15 19:13:50,949] INFO: [START] Deploying stack: perimetergwlbeStack
+[2025-06-15 19:13:51,176] INFO: No updates needed for perimetergwlbeStack

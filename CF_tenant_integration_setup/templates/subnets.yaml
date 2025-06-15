@@ -1,0 +1,241 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: >
+  Create subnets for Public, Private, ALB, GWLB, and SFTP endpoints,
+  using parameterized CIDR blocks and Availability Zones.
+
+Parameters:
+  ProjectName:
+    Type: String
+    Description: Name prefix for tagging resources.
+
+  AvailabilityZones:
+    Type: CommaDelimitedList
+    Description: List of Availability Zones (e.g. ["ap-southeast-1a", "ap-southeast-1b"])
+
+  PublicSubnetCidrs:
+    Type: CommaDelimitedList
+    Description: CIDR blocks for public subnets (one per AZ)
+
+  PrivateSubnetCidrs:
+    Type: CommaDelimitedList
+    Description: CIDR blocks for private subnets (one per AZ)
+
+  ALBSubnetCidrs:
+    Type: CommaDelimitedList
+    Description: CIDR blocks for ALB subnets (one per AZ)
+
+  GWLBSubnetCidrs:
+    Type: CommaDelimitedList
+    Description: CIDR blocks for Gateway Load Balancer subnets (one per AZ)
+
+  SFTPSubnetCidrs:
+    Type: CommaDelimitedList
+    Description: CIDR blocks for SFTP subnets (one per AZ)
+
+  VpcId:
+    Type: AWS::EC2::VPC::Id
+    Description: VPC ID to create the subnets in.
+
+Resources:
+
+  # Example for Public Subnets (3 AZs)
+  PublicSubnet1:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VpcId
+      CidrBlock: !Select [0, !Ref PublicSubnetCidrs]
+      AvailabilityZone: !Select [0, !Ref AvailabilityZones]
+      MapPublicIpOnLaunch: true
+      Tags:
+        - Key: Name
+          Value: !Sub "${ProjectName}-public-subnet-1"
+
+  PublicSubnet2:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VpcId
+      CidrBlock: !Select [1, !Ref PublicSubnetCidrs]
+      AvailabilityZone: !Select [1, !Ref AvailabilityZones]
+      MapPublicIpOnLaunch: true
+      Tags:
+        - Key: Name
+          Value: !Sub "${ProjectName}-public-subnet-2"
+
+  PublicSubnet3:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VpcId
+      CidrBlock: !Select [2, !Ref PublicSubnetCidrs]
+      AvailabilityZone: !Select [2, !Ref AvailabilityZones]
+      MapPublicIpOnLaunch: true
+      Tags:
+        - Key: Name
+          Value: !Sub "${ProjectName}-public-subnet-3"
+
+  # Private Subnets (3 AZs)
+  PrivateSubnet1:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VpcId
+      CidrBlock: !Select [0, !Ref PrivateSubnetCidrs]
+      AvailabilityZone: !Select [0, !Ref AvailabilityZones]
+      MapPublicIpOnLaunch: false
+      Tags:
+        - Key: Name
+          Value: !Sub "${ProjectName}-private-subnet-1"
+
+  PrivateSubnet2:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VpcId
+      CidrBlock: !Select [1, !Ref PrivateSubnetCidrs]
+      AvailabilityZone: !Select [1, !Ref AvailabilityZones]
+      MapPublicIpOnLaunch: false
+      Tags:
+        - Key: Name
+          Value: !Sub "${ProjectName}-private-subnet-2"
+
+  PrivateSubnet3:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VpcId
+      CidrBlock: !Select [2, !Ref PrivateSubnetCidrs]
+      AvailabilityZone: !Select [2, !Ref AvailabilityZones]
+      MapPublicIpOnLaunch: false
+      Tags:
+        - Key: Name
+          Value: !Sub "${ProjectName}-private-subnet-3"
+
+  # ALB Subnets (3 AZs)
+  ALBSubnet1:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VpcId
+      CidrBlock: !Select [0, !Ref ALBSubnetCidrs]
+      AvailabilityZone: !Select [0, !Ref AvailabilityZones]
+      MapPublicIpOnLaunch: false
+      Tags:
+        - Key: Name
+          Value: !Sub "${ProjectName}-alb-subnet-1"
+
+  ALBSubnet2:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VpcId
+      CidrBlock: !Select [1, !Ref ALBSubnetCidrs]
+      AvailabilityZone: !Select [1, !Ref AvailabilityZones]
+      MapPublicIpOnLaunch: false
+      Tags:
+        - Key: Name
+          Value: !Sub "${ProjectName}-alb-subnet-2"
+
+  ALBSubnet3:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VpcId
+      CidrBlock: !Select [2, !Ref ALBSubnetCidrs]
+      AvailabilityZone: !Select [2, !Ref AvailabilityZones]
+      MapPublicIpOnLaunch: false
+      Tags:
+        - Key: Name
+          Value: !Sub "${ProjectName}-alb-subnet-3"
+
+  # GWLB Subnets (3 AZs)
+  GWLBSubnet1:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VpcId
+      CidrBlock: !Select [0, !Ref GWLBSubnetCidrs]
+      AvailabilityZone: !Select [0, !Ref AvailabilityZones]
+      MapPublicIpOnLaunch: false
+      Tags:
+        - Key: Name
+          Value: !Sub "${ProjectName}-gwlb-subnet-1"
+
+  GWLBSubnet2:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VpcId
+      CidrBlock: !Select [1, !Ref GWLBSubnetCidrs]
+      AvailabilityZone: !Select [1, !Ref AvailabilityZones]
+      MapPublicIpOnLaunch: false
+      Tags:
+        - Key: Name
+          Value: !Sub "${ProjectName}-gwlb-subnet-2"
+
+  GWLBSubnet3:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VpcId
+      CidrBlock: !Select [2, !Ref GWLBSubnetCidrs]
+      AvailabilityZone: !Select [2, !Ref AvailabilityZones]
+      MapPublicIpOnLaunch: false
+      Tags:
+        - Key: Name
+          Value: !Sub "${ProjectName}-gwlb-subnet-3"
+
+  # SFTP Subnets (3 AZs)
+  SFTPSubnet1:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VpcId
+      CidrBlock: !Select [0, !Ref SFTPSubnetCidrs]
+      AvailabilityZone: !Select [0, !Ref AvailabilityZones]
+      MapPublicIpOnLaunch: false
+      Tags:
+        - Key: Name
+          Value: !Sub "${ProjectName}-sftp-subnet-1"
+
+  SFTPSubnet2:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VpcId
+      CidrBlock: !Select [1, !Ref SFTPSubnetCidrs]
+      AvailabilityZone: !Select [1, !Ref AvailabilityZones]
+      MapPublicIpOnLaunch: false
+      Tags:
+        - Key: Name
+          Value: !Sub "${ProjectName}-sftp-subnet-2"
+
+  SFTPSubnet3:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref VpcId
+      CidrBlock: !Select [2, !Ref SFTPSubnetCidrs]
+      AvailabilityZone: !Select [2, !Ref AvailabilityZones]
+      MapPublicIpOnLaunch: false
+      Tags:
+        - Key: Name
+          Value: !Sub "${ProjectName}-sftp-subnet-3"
+
+Outputs:
+
+  PublicSubnetIds:
+    Description: List of Public Subnet IDs
+    Value: !Join [",", [!Ref PublicSubnet1, !Ref PublicSubnet2, !Ref PublicSubnet3]]
+    Export:
+      Name: !Sub "${ProjectName}-PublicSubnetIds"
+
+  PrivateSubnetIds:
+    Description: List of Private Subnet IDs
+    Value: !Join [",", [!Ref PrivateSubnet1, !Ref PrivateSubnet2, !Ref PrivateSubnet3]]
+    Export:
+      Name: !Sub "${ProjectName}-PrivateSubnetIds"
+
+  ALBSubnetIds:
+    Description: List of ALB Subnet IDs
+    Value: !Join [",", [!Ref ALBSubnet1, !Ref ALBSubnet2, !Ref ALBSubnet3]]
+    Export:
+      Name: !Sub "${ProjectName}-ALBSubnetIds"
+
+  GWLBSubnetIds:
+    Description: List of GWLB Subnet IDs
+    Value: !Join [",", [!Ref GWLBSubnet1, !Ref GWLBSubnet2, !Ref GWLBSubnet3]]
+    Export:
+      Name: !Sub "${ProjectName}-GWLBSubnetIds"
+
+  SFTPSubnetIds:
+    Description: List of SFTP Subnet IDs
+    Value: !Join [",", [!Ref SFTPSubnet1, !Ref SFTPSubnet2, !Ref SFTPSubnet3]]
+    Export:
+      Name: !Sub "${ProjectName}-SFTPSubnetIds"

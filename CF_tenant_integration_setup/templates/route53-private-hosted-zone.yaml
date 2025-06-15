@@ -1,0 +1,31 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Private Route53 hosted zone for internal domain & ACM validation.
+
+Parameters:
+  ProjectName:
+    Type: String
+
+  VpcId:
+    Type: AWS::EC2::VPC::Id
+
+  DomainName:
+    Type: String
+    Description: Private domain name for hosted zone (e.g., internal.example.com)
+
+Resources:
+  PrivateHostedZone:
+    Type: AWS::Route53::HostedZone
+    Properties:
+      Name: !Ref DomainName
+      VPCs:
+        - VPCId: !Ref VpcId
+          VPCRegion: !Ref "AWS::Region"
+      HostedZoneConfig:
+        Comment: !Sub "Private hosted zone for ${DomainName}"
+
+Outputs:
+  HostedZoneId:
+    Description: Private hosted zone ID
+    Value: !Ref PrivateHostedZone
+    Export:
+      Name: !Sub "${ProjectName}-PrivateHostedZoneId"

@@ -1,0 +1,30 @@
+[2025-06-15 20:06:42,263] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 20:06:42,470] INFO: [START] Deleting stack: perimetergwlbeStack
+[2025-06-15 20:06:43,210] INFO: [DELETE] Delete request sent for stack: perimetergwlbeStack
+[2025-06-15 20:06:43,210] INFO: Waiting for stack 'perimetergwlbeStack' to be deleted...
+[2025-06-15 20:08:07,396] INFO: [COMPLETE] Stack perimetergwlbeStack successfully deleted.
+[2025-06-15 20:08:07,397] INFO: [START] Deleting stack: perimeterec2Stack
+[2025-06-15 20:08:07,682] INFO: [DELETE] Delete request sent for stack: perimeterec2Stack
+[2025-06-15 20:08:07,682] INFO: Waiting for stack 'perimeterec2Stack' to be deleted...
+[2025-06-15 20:10:24,666] INFO: [COMPLETE] Stack perimeterec2Stack successfully deleted.
+[2025-06-15 20:10:24,666] INFO: [START] Deleting stack: perimeterGWLBStack
+[2025-06-15 20:10:24,951] INFO: [DELETE] Delete request sent for stack: perimeterGWLBStack
+[2025-06-15 20:10:24,951] INFO: Waiting for stack 'perimeterGWLBStack' to be deleted...
+[2025-06-15 20:11:38,248] INFO: Found credentials in shared credentials file: ~/.aws/credentials
+[2025-06-15 20:11:38,408] INFO: [START] Deleting stack: perimetergwlbeStack
+[2025-06-15 20:11:38,905] WARNING: [SKIP] Stack perimetergwlbeStack does not exist.
+[2025-06-15 20:11:38,905] INFO: [START] Deleting stack: perimeterec2Stack
+[2025-06-15 20:11:38,979] WARNING: [SKIP] Stack perimeterec2Stack does not exist.
+[2025-06-15 20:11:38,979] INFO: [START] Deleting stack: perimeterGWLBStack
+[2025-06-15 20:11:39,069] WARNING: [SKIP] Stack perimeterGWLBStack does not exist.
+[2025-06-15 20:11:39,069] INFO: [START] Deleting stack: perimeterSGStack
+[2025-06-15 20:11:39,334] INFO: [DELETE] Delete request sent for stack: perimeterSGStack
+[2025-06-15 20:11:39,334] INFO: Waiting for stack 'perimeterSGStack' to be deleted...
+[2025-06-15 20:11:49,838] INFO: [COMPLETE] Stack perimeterSGStack successfully deleted.
+[2025-06-15 20:11:49,839] INFO: [START] Deleting stack: perimeterVPCstack
+[2025-06-15 20:11:50,233] INFO: [DELETE] Delete request sent for stack: perimeterVPCstack
+[2025-06-15 20:11:50,233] INFO: Waiting for stack 'perimeterVPCstack' to be deleted...
+[2025-06-15 20:12:00,781] INFO:   -> perimeterVPCstack still deleting...
+[2025-06-15 20:12:11,311] INFO:   -> perimeterVPCstack still deleting...
+[2025-06-15 20:12:21,849] INFO:   -> perimeterVPCstack still deleting...
+[2025-06-15 20:12:32,356] INFO: [COMPLETE] Stack perimeterVPCstack successfully deleted.

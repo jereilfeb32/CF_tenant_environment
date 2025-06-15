@@ -1,0 +1,203 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Simplified Route Tables and Subnet Associations.
+
+Parameters:
+  ProjectName:
+    Type: String
+
+  VpcId:
+    Type: AWS::EC2::VPC::Id
+
+  InternetGatewayId:
+    Type: String
+
+  PublicSubnetIds:
+    Type: CommaDelimitedList
+
+  PrivateSubnetIds:
+    Type: CommaDelimitedList
+
+  ALBSubnetIds:
+    Type: CommaDelimitedList
+
+  GWLBSubnetIds:
+    Type: CommaDelimitedList
+
+  SFTPSubnetIds:
+    Type: CommaDelimitedList
+
+Resources:
+
+  PublicRouteTable:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId: !Ref VpcId
+      Tags:
+        - Key: Name
+          Value: !Sub "${ProjectName}-public-rt"
+
+  PublicRoute:
+    Type: AWS::EC2::Route
+    DependsOn: PublicRouteTable
+    Properties:
+      RouteTableId: !Ref PublicRouteTable
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId: !Ref InternetGatewayId
+
+  PrivateRouteTable:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId: !Ref VpcId
+      Tags:
+        - Key: Name
+          Value: !Sub "${ProjectName}-private-rt"
+
+  ALBRouteTable:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId: !Ref VpcId
+      Tags:
+        - Key: Name
+          Value: !Sub "${ProjectName}-alb-rt"
+
+  GWLBRouteTable:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId: !Ref VpcId
+      Tags:
+        - Key: Name
+          Value: !Sub "${ProjectName}-gwlb-rt"
+
+  SFTPRouteTable:
+    Type: AWS::EC2::RouteTable
+    Properties:
+      VpcId: !Ref VpcId
+      Tags:
+        - Key: Name
+          Value: !Sub "${ProjectName}-sftp-rt"
+
+  # Public Subnet Associations
+  PublicSubnetAssoc1:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Select [0, !Ref PublicSubnetIds]
+      RouteTableId: !Ref PublicRouteTable
+
+  PublicSubnetAssoc2:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Select [1, !Ref PublicSubnetIds]
+      RouteTableId: !Ref PublicRouteTable
+
+  PublicSubnetAssoc3:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Select [2, !Ref PublicSubnetIds]
+      RouteTableId: !Ref PublicRouteTable
+
+  # Private Subnet Associations
+  PrivateSubnetAssoc1:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Select [0, !Ref PrivateSubnetIds]
+      RouteTableId: !Ref PrivateRouteTable
+
+  PrivateSubnetAssoc2:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Select [1, !Ref PrivateSubnetIds]
+      RouteTableId: !Ref PrivateRouteTable
+
+  PrivateSubnetAssoc3:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Select [2, !Ref PrivateSubnetIds]
+      RouteTableId: !Ref PrivateRouteTable
+
+  # ALB Subnet Associations
+  ALBSubnetAssoc1:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Select [0, !Ref ALBSubnetIds]
+      RouteTableId: !Ref ALBRouteTable
+
+  ALBSubnetAssoc2:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Select [1, !Ref ALBSubnetIds]
+      RouteTableId: !Ref ALBRouteTable
+
+  ALBSubnetAssoc3:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Select [2, !Ref ALBSubnetIds]
+      RouteTableId: !Ref ALBRouteTable
+
+  # GWLB Subnet Associations
+  GWLBSubnetAssoc1:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Select [0, !Ref GWLBSubnetIds]
+      RouteTableId: !Ref GWLBRouteTable
+
+  GWLBSubnetAssoc2:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Select [1, !Ref GWLBSubnetIds]
+      RouteTableId: !Ref GWLBRouteTable
+
+  GWLBSubnetAssoc3:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Select [2, !Ref GWLBSubnetIds]
+      RouteTableId: !Ref GWLBRouteTable
+
+  # SFTP Subnet Associations
+  SFTPSubnetAssoc1:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Select [0, !Ref SFTPSubnetIds]
+      RouteTableId: !Ref SFTPRouteTable
+
+  SFTPSubnetAssoc2:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Select [1, !Ref SFTPSubnetIds]
+      RouteTableId: !Ref SFTPRouteTable
+
+  SFTPSubnetAssoc3:
+    Type: AWS::EC2::SubnetRouteTableAssociation
+    Properties:
+      SubnetId: !Select [2, !Ref SFTPSubnetIds]
+      RouteTableId: !Ref SFTPRouteTable
+
+Outputs:
+  PublicRouteTableId:
+    Description: Public Route Table ID
+    Value: !Ref PublicRouteTable
+    Export:
+      Name: !Sub "${ProjectName}-PublicRouteTableId"
+
+  PrivateRouteTableId:
+    Description: Private Route Table ID
+    Value: !Ref PrivateRouteTable
+    Export:
+      Name: !Sub "${ProjectName}-PrivateRouteTableId"
+
+  ALBRouteTableId:
+    Description: ALB Route Table ID
+    Value: !Ref ALBRouteTable
+    Export:
+      Name: !Sub "${ProjectName}-ALBRouteTableId"
+
+  GWLBRouteTableId:
+    Description: GWLB Route Table ID
+    Value: !Ref GWLBRouteTable
+    Export:
+      Name: !Sub "${ProjectName}-GWLBRouteTableId"
+
+  SFTPRouteTableId:
+    Description: SFTP Route Table ID
+    Value: !Ref SFTPRouteTable
+    Export:
+      Name: !Sub "${ProjectName}-SFTPRouteTableId"

@@ -1,0 +1,104 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Application Load Balancer with HTTPS listener using supplied ACM certificate ARN and WAF association.
+
+Parameters:
+  ProjectName:
+    Type: String
+    Description: Project name or prefix.
+
+  ALBSubnetIds:
+    Type: CommaDelimitedList
+    Description: List of subnet IDs for the ALB.
+
+  ALBSecurityGroupId:
+    Type: AWS::EC2::SecurityGroup::Id
+    Description: Security Group ID for the ALB.
+
+  TargetGroupSecurityGroupId:
+    Type: AWS::EC2::SecurityGroup::Id
+    Description: Security Group ID for ALB target group instances.
+
+  ACMCertificateArn:
+    Type: String
+    Description: ARN of the ACM certificate to attach to the HTTPS listener.
+
+  WAFWebACLArn:
+    Type: String
+    Description: ARN of the WAF Web ACL to associate with the ALB.
+
+  VpcId:
+    Type: String
+    Description: VPC ID where the ALB will be deployed.
+
+Resources:
+  ALB:
+    Type: AWS::ElasticLoadBalancingV2::LoadBalancer
+    Properties:
+      Name: !Sub "${ProjectName}-alb"
+      Subnets: !Ref ALBSubnetIds
+      SecurityGroups:
+        - !Ref ALBSecurityGroupId
+      Scheme: internal  # Change to 'internet-facing' if needed
+      Type: application
+      IpAddressType: ipv4
+      Tags:
+        - Key: Name
+          Value: !Sub "${ProjectName}-alb"
+
+  ALBTargetGroup:
+    Type: AWS::ElasticLoadBalancingV2::TargetGroup
+    Properties:
+      VpcId: !Ref VpcId  # Use the VPC ID passed as a parameter
+      Port: 80
+      Protocol: HTTP
+      TargetType: instance
+      HealthCheckPath: /
+      Matcher:
+        HttpCode: 200
+      Tags:
+        - Key: Name
+          Value: !Sub "${ProjectName}-tg"
+
+  ALBListenerHTTP:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    Properties:
+      LoadBalancerArn: !Ref ALB
+      Port: 80
+      Protocol: HTTP
+      DefaultActions:
+        - Type: redirect
+          RedirectConfig:
+            Protocol: HTTPS
+            Port: "443"
+            StatusCode: HTTP_301
+
+  ALBListenerHTTPS:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    Properties:
+      LoadBalancerArn: !Ref ALB
+      Port: 443
+      Protocol: HTTPS
+      Certificates:
+        - CertificateArn: !Ref ACMCertificateArn
+      DefaultActions:
+        - Type: forward
+          TargetGroupArn: !Ref ALBTargetGroup
+
+  ALBWafAssociation:
+    Type: AWS::WAFv2::WebACLAssociation
+    Properties:
+      ResourceArn: !Ref ALB
+      WebACLArn: !Ref WAFWebACLArn
+
+Outputs:
+  ALBArn:
+    Description: ALB ARN
+    Value: !Ref ALB
+    Export:
+      Name: !Sub "${ProjectName}-ALBArn"
+
+  ALBTargetGroupArn:
+    Description: ALB Target Group ARN
+    Value: !Ref ALBTargetGroup
+    Export:
+      Name: !Sub "${ProjectName}-ALBTargetGroupArn"

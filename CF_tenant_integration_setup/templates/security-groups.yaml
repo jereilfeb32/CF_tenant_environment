@@ -1,0 +1,106 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Security Groups for ALB, Target Groups, GWLB, SFTP, VGW, and API Gateway VPC Endpoint.
+
+Parameters:
+  ProjectName:
+    Type: String
+
+  VpcId:
+    Type: AWS::EC2::VPC::Id
+
+Resources:
+
+  ALBSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Security group for ALB
+      VpcId: !Ref VpcId
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 443
+          ToPort: 443
+          CidrIp: 0.0.0.0/0
+      Tags:
+        - Key: Name
+          Value: !Sub "${ProjectName}-alb-sg"
+
+  TargetGroupSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Security group for backend instances in target groups
+      VpcId: !Ref VpcId
+      Tags:
+        - Key: Name
+          Value: !Sub "${ProjectName}-targetgroup-sg"
+
+  GWLBSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Security group for Gateway Load Balancer
+      VpcId: !Ref VpcId
+      Tags:
+        - Key: Name
+          Value: !Sub "${ProjectName}-gwlb-sg"
+
+  SFTPSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Security group for AWS Transfer Family endpoint
+      VpcId: !Ref VpcId
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0  # Adjust as necessary for your use case
+      Tags:
+        - Key: Name
+          Value: !Sub "${ProjectName}-sftp-sg"
+
+  ApiGatewayEndpointSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Security group for API Gateway VPC Interface Endpoint
+      VpcId: !Ref VpcId
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 443
+          ToPort: 443
+          CidrIp: 10.10.0.0/16  # Replace with your actual VPC CIDR block
+      Tags:
+        - Key: Name
+          Value: !Sub "${ProjectName}-apigw-endpoint-sg"
+
+Outputs:
+  ALBSecurityGroupId:
+    Description: ALB Security Group ID
+    Value: !Ref ALBSecurityGroup
+    Export:
+      Name: !Sub "${ProjectName}-ALBSecurityGroupId"
+
+  TargetGroupSecurityGroupId:
+    Description: Target Group Security Group ID
+    Value: !Ref TargetGroupSecurityGroup
+    Export:
+      Name: !Sub "${ProjectName}-TargetGroupSecurityGroupId"
+
+  GWLBSecurityGroupId:
+    Description: GWLB Security Group ID
+    Value: !Ref GWLBSecurityGroup
+    Export:
+      Name: !Sub "${ProjectName}-GWLBSecurityGroupId"
+
+  SFTPSecurityGroupId:
+    Description: SFTP Security Group ID
+    Value: !Ref SFTPSecurityGroup
+    Export:
+      Name: !Sub "${ProjectName}-SFTPSecurityGroupId"
+
+  ApiGatewayEndpointSecurityGroupId:
+    Description: API Gateway Endpoint Security Group ID
+    Value: !Ref ApiGatewayEndpointSecurityGroup
+    Export:
+      Name: !Sub "${ProjectName}-ApiGatewayEndpointSecurityGroupId"

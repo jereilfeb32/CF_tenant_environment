@@ -1,0 +1,30 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: >
+  VPC foundational template: creates a VPC with DNS support and hostnames enabled.
+
+Parameters:
+  ProjectName:
+    Type: String
+    Description: Project name prefix for resource naming
+
+  VpcCidr:
+    Type: String
+    Description: CIDR block for the VPC
+
+Resources:
+  VPC:
+    Type: AWS::EC2::VPC
+    Properties:
+      CidrBlock: !Ref VpcCidr
+      EnableDnsSupport: true
+      EnableDnsHostnames: true
+      Tags:
+        - Key: Name
+          Value: !Sub "${ProjectName}-vpc"
+
+Outputs:
+  VpcId:
+    Description: VPC ID created by this template
+    Value: !Ref VPC
+    Export:
+      Name: !Sub "${ProjectName}-VpcId"

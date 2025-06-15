@@ -1,0 +1,41 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: AWS WAFv2 Web ACL with basic managed rule group and sample configuration.
+
+Parameters:
+  ProjectName:
+    Type: String
+    Description: Project name prefix for tagging.
+
+Resources:
+  WebACL:
+    Type: AWS::WAFv2::WebACL
+    Properties:
+      Name: !Sub "${ProjectName}-web-acl"
+      Scope: REGIONAL
+      DefaultAction:
+        Allow: {}
+      Description: Basic WAF Web ACL with AWS Managed Rules
+      VisibilityConfig:
+        SampledRequestsEnabled: true
+        CloudWatchMetricsEnabled: true
+        MetricName: !Sub "${ProjectName}-web-acl-metric"
+      Rules:
+        - Name: AWSManagedCommonRules
+          Priority: 1
+          OverrideAction:
+            None: {}
+          Statement:
+            ManagedRuleGroupStatement:
+              VendorName: AWS
+              Name: AWSManagedRulesCommonRuleSet
+          VisibilityConfig:
+            SampledRequestsEnabled: true
+            CloudWatchMetricsEnabled: true
+            MetricName: AWSManagedRulesCommonRuleSet
+
+Outputs:
+  WebACLArn:
+    Description: The ARN of the WAF Web ACL
+    Value: !GetAtt WebACL.Arn  # Correctly reference the ARN
+    Export:
+      Name: !Sub "${ProjectName}-WebACLArn"
